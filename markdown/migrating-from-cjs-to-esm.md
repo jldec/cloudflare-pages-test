@@ -133,5 +133,5 @@ For this demo, `package.json` installs both versions of shortscale.
 
 ---- #excerpt ----
 
-How to migtrate from CommonJS to EcmaScript Modules.
+How to migrate from CommonJS to EcmaScript Modules.
 
