@@ -1,4 +1,5 @@
-# jldec.me (copied to cloudflare-pages-test )
+# cloudflare-pages-test
+Repo based on source repo for [jldec.me](https://jldec.me).
 
 This blog is generated from markdown using [pub-server](https://jldec.github.io/pub-doc).
 
