@@ -1,0 +1,17 @@
+{
+  "name": "cloudflare-pages-test",
+  "version": "2021.01.30",
+  "description": "copy of jldec.me blog built using jldec/pub-server",
+  "repository": "git://github.com/jldec/cloudflare-pages-test.git",
+  "main": "pub-config.js",
+  "dependencies": {
+    "pub-server": "^2.7.4",
+    "pub-theme-pubblog": "^1.2.10"
+  },
+  "scripts": {
+    "start": "pub",
+    "generate": "pub -O",
+    "preview": "pub -S out"
+  },
+  "license": "MIT"
+}
