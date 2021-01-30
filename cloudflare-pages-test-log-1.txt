@@ -1,0 +1,61 @@
+19:22:43.045	Initializing build environment
+19:25:15.671	Finished
+19:25:15.671	Cloning repo
+19:25:19.970	Finished
+19:25:20.884	Installing dependencies
+19:25:20.887	Python version set to 2.7
+19:25:22.198	v12.18.0 is already installed.
+19:25:22.688	Now using node v12.18.0 (npm v6.14.4)
+19:25:22.730	Started restoring cached build plugins
+19:25:22.734	Finished restoring cached build plugins
+19:25:22.854	Attempting ruby version 2.7.1, read from environment
+19:25:23.891	Using ruby version 2.7.1
+19:25:24.154	Using PHP version 5.6
+19:25:24.184	5.2 is already installed.
+19:25:24.190	Using Swift version 5.2
+19:25:24.190	Started restoring cached node modules
+19:25:24.194	Finished restoring cached node modules
+19:25:24.373	Installing NPM modules using NPM version 6.14.4
+19:25:32.823	npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.1 (node_modules/chokidar/node_modules/fsevents):
+19:25:32.823	npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.1: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+19:25:32.823	
+19:25:32.825	added 355 packages from 266 contributors and audited 356 packages in 7.819s
+19:25:32.948	
+19:25:32.948	31 packages are looking for funding
+19:25:32.948	  run `npm fund` for details
+19:25:32.948	
+19:25:32.949	found 0 vulnerabilities
+19:25:32.949	
+19:25:32.990	NPM modules installed
+19:25:33.274	Installing Hugo 0.54.0
+19:25:34.415	Hugo Static Site Generator v0.54.0-B1A82C61A/extended linux/amd64 BuildDate: 2019-02-01T10:04:38Z
+19:25:34.417	Started restoring cached go cache
+19:25:34.421	Finished restoring cached go cache
+19:25:34.449	go version go1.14.4 linux/amd64
+19:25:34.455	go version go1.14.4 linux/amd64
+19:25:34.456	Installing missing commands
+19:25:34.456	Verify run directory
+19:25:34.456	Executing user command: npm run generate
+19:25:34.699	
+19:25:34.699	> cloudflare-pages-test@2021.1.30 generate /opt/buildhome/repo
+19:25:34.700	> pub -O
+19:25:34.700	
+19:25:34.786	pub-server v2.7.4
+19:25:34.859	/opt/buildhome/repo/pub-config.js
+19:25:34.865	pub-pkg-jquery
+19:25:34.867	pub-theme-pubblog
+19:25:34.868	pub-pkg-font-open-sans
+19:25:34.869	pub-pkg-font-awesome
+19:25:34.869	pub-pkg-seo
+19:25:34.870	pub-pkg-highlight
+19:25:34.871	pub-pkg-editor
+19:25:35.234	output /pub/_opts.json (61207 bytes)
+19:25:35.500	output script: /pub/pub-ux.js (1462 bytes, 268 ms)
+19:25:35.738	output script: /pub/_generator-plugins.js (17119 bytes, 507 ms)
+19:25:35.928	output script: /pub/js/editor-ui.js (9869 bytes, 697 ms)
+19:25:36.310	output script: /pub/js/pub-preview.js (17790 bytes, 1080 ms)
+19:25:43.308	output script: /pub/_generator.js (518553 bytes, 8076 ms)
+19:25:43.320	output 14 pages, 6 scripts, 71 statics
+19:25:43.350	
+19:25:43.984	Deploying site
+19:25:47.565	Finished

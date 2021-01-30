@@ -26,7 +26,8 @@ var opts = module.exports = {
 
   staticPaths: [
     { path:'./images', route:'/images' },
-    './favicon.ico'
+    './favicon.ico',
+    './cloudflare-pages-test-log-1.txt'
   ],
 
   outputs: [
