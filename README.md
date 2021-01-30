@@ -1,9 +1,9 @@
-# cloudflare-pages-test
+# cloudflare-pages-test / jldec.eu
 Repo based on source repo for [jldec.me](https://jldec.me).
 
 This blog is generated from markdown using [pub-server](https://jldec.github.io/pub-doc).
 
-To edit the site locally, clone https://github.com/jldec/jldec.me, then
+To edit the site locally, clone https://github.com/jldec/cloudflare-pages-test, then
 
 ```sh
 npm install

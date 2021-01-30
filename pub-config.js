@@ -1,7 +1,7 @@
 var opts = module.exports = {
 
-  docTitle: 'jldec.me',          // site name
-  appUrl: 'https://jldec.me',    // site url
+  docTitle: 'jldec.eu',          // site name
+  appUrl: 'https://jldec.eu',    // site url
   noRobots: true,                // not ok to crawl
   throttleReload: '1s',
   linkNewWindow: true,
@@ -15,7 +15,7 @@ var opts = module.exports = {
     'pub-pkg-highlight'
   ],
 
-  github: 'https://github.com/jldec/jldec.me',
+  github: 'https://github.com/jldec/cloudflare-pages-test',
 
   sources: [
     {
