@@ -131,6 +131,9 @@ For this demo, `package.json` installs both versions of shortscale.
 
 > _!cubes 3x_
 
+> To leave a comment please visit  
+> [dev.to/jldec](https://dev.to/jldec/migrating-from-commonjs-to-esm-2p24)
+
 ---- #excerpt ----
 
 How to migrate from CommonJS to EcmaScript Modules.

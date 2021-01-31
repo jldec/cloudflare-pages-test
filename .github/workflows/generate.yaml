@@ -1,0 +1,33 @@
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      JLDEC_UK: TRUE
+
+    steps:
+    - name: checkout source repo
+      uses: actions/checkout@v2
+
+    - name: checkout destination repo under ./out
+      uses: actions/checkout@v2
+      with:
+        repository: jldec/jldec.uk
+        token: ${{ secrets.GH_TOKEN }}
+        path: out
+
+    - name: generate output
+      run: |
+        npm ci
+        rm -r out/*
+        npm run generate
+        cd out
+        git config user.email "jldec@ciaosoft.com"
+        git config user.name "cloudflare-pages-test generate action"
+        git status
+        git add -A
+        if ! git diff-index --quiet HEAD ; then git commit -m 'https://github.com/jldec/cloudflare-pages-test/actions/runs/${{ github.run_id }}' && git push ; fi
+        echo done

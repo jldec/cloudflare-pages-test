@@ -1,9 +1,14 @@
-# cloudflare-pages-test / jldec.eu
-Repo based on source repo for [jldec.me](https://jldec.me).
+# cloudflare-pages-test
+Copy of the (private) source repo for [jldec.me](https://jldec.me).  
+Contains markdown blog content to generate a static site using [pub-server](https://jldec.github.io/pub-doc).
 
-This blog is generated from markdown using [pub-server](https://jldec.github.io/pub-doc).
+## on push
+- Cloudflare generates Cloudflare Pages site at [jldec.eu](https://jldec.eu)
+- GitHub Action generates GitHub Pages site at [jldec.uk](https://jldec.uk)
 
-To edit the site locally, clone https://github.com/jldec/cloudflare-pages-test, then
+## to edit content
+
+Clone https://github.com/jldec/cloudflare-pages-test, then
 
 ```sh
 npm install

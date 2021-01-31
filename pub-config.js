@@ -1,11 +1,11 @@
 var opts = module.exports = {
 
-  docTitle: 'jldec.eu',          // site name
-  appUrl: 'https://jldec.eu',    // site url
-  noRobots: true,                // not ok to crawl
+  docTitle: (process.env.JLDEC_UK ? 'jldec.uk' : 'jldec.eu'), // site name
+  appUrl: 'https://' + (process.env.JLDEC_UK ? 'jldec.uk' : 'jldec.eu'), // site url
+  noRobots: true, // not ok to crawl
   throttleReload: '1s',
   linkNewWindow: true,
-  tmp: './tmp',                   // tmp dir for atomic writes
+  tmp: './tmp', // tmp dir for atomic writes
 
   pkgs: [
     'pub-theme-pubblog',
@@ -27,6 +27,8 @@ var opts = module.exports = {
   staticPaths: [
     { path:'./images', route:'/images' },
     './favicon.ico',
+    './CNAME',
+    './.nojekyll',
     './cloudflare-pages-test-log-1.txt'
   ],
 
