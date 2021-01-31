@@ -12,9 +12,9 @@ Cloudflare recently [announced](https://blog.cloudflare.com/cloudflare-pages/) t
 
 ## Cloudflare Pages
 
-This is a walkthrough of setting up [jldec.eu](https://jldec.eu) on Cloudflare Pages.  
+This is a walkthrough of setting up [jldec.eu](https://jldec.eu), a copy of [jldec.me](https://jldec.me), on Cloudflare Pages.
 
-If you have access to Cloudflare Pages, you will see a button like this when you login to your Cloudflare dashboard.
+If you have access to Cloudflare Pages, you will see this button when you login to Cloudflare.
 
 ![Cloudflare Pages Beta button on dashboard](/images/cf-pages-beta.png)
 
@@ -22,12 +22,12 @@ This takes you to a GitHub form for granting repo access to the 'Cloudflare Page
 
 ![Authorize Cloudflare Pages app on GitHub](/images/cf-pages-github-app.png)
 
-Back on Cloudflare, you can choose the repo for the new Cloudflare Pages project.  
-[cloudflare-pages-test](https://github.com/jldec/cloudflare-pages-test) is a copy of the markdown source repo from [jldec.me](https://jldec.me).
+Back on Cloudflare, you can choose the repo for your new Cloudflare Pages project.  
+[cloudflare-pages-test](https://github.com/jldec/cloudflare-pages-test) is a copy of my markdown source repo from [jldec.me](https://jldec.me).
 
 ![Select repo for the Cloudflare Pages project](/images/cf-pages-select-repo.png)
 
-I provided the branch name, build command, and output directory.  
+In the configuratiom form, I provided branch name, build command, and output directory.  
 The project name defaults to the repo name.
 
 ![Configure the build command and output directory](/images/cf-pages-configure-build.png)
@@ -41,22 +41,21 @@ I used my own cloudflare-hosted domain [jldec.eu](https://jldec.eu).
 
 ![Cloudflare Pages custom domain](/images/cf-pages-custom-domain.png)
 
-Subsequent commits to the GitHub repo trigger a fresh build and deploy.
+Subsequent commits to the GitHub repo trigger a fresh build and re-deploy.
 
 ![More deployments](/images/cf-pages-deployments.png)
 
 ## GitHub Pages
 
-For comparison, I set up [jldec.uk](https://jldec.uk) using [GitHub Pages](https://pages.github.com).
+For comparison, I set up [jldec.uk](https://jldec.uk), another copy of [jldec.me](https://jldec.me) using [GitHub Pages](https://pages.github.com).
 
-First I created a new [jldec.uk repo](https://github.com/jldec/jldec.uk/) to host the GitHub Pages site. Since the output can include javascript bundles, fonts, etc., I prefer not to store the output in the same repo as the source.
+First I created a new jldec.uk [repo](https://github.com/jldec/jldec.uk/) to host the GitHub Pages site. Since the output includes javascript bundles, fonts, etc., I prefer to keep it separate from the source.
 
-I pushed the first generated HTML website to this repo manually, using the output of a local build. The empty `.nojekyll` file is important to prevent GitHub Pages from triggering a Jekyll build.
+I pushed the first generated website to this repo manually, using the output of a local build. The empty `.nojekyll` file is important to a Jekyll build on GitHub.
 
 ![GitHub Pages repo](/images/gh-pages-repo.png)
 
-Next I configured GitHub Pages in the repo settings.  
-(_... always nice to use a feature you [helped build](https://github.blog/2016-08-17-simpler-github-pages-publishing/)_.)
+Next I configured GitHub Pages in the repo settings ([...looks familiar 😃](https://github.blog/2016-08-17-simpler-github-pages-publishing/))
 
 ![GitHub Pages settings](/images/gh-pages-settings.png)
 
