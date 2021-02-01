@@ -51,7 +51,7 @@ For comparison, I set up [jldec.uk](https://jldec.uk), another copy of [jldec.me
 
 First I created a new jldec.uk [repo](https://github.com/jldec/jldec.uk/) to host the GitHub Pages site. Since the output includes javascript bundles, fonts, etc., I prefer to keep it separate from the source.
 
-I pushed the first generated website to this repo manually, using the output of a local build. The empty `.nojekyll` file is important to a Jekyll build on GitHub.
+I pushed the first generated website to this repo manually, using the output of a local build. The empty `.nojekyll` file is important to avoid a Jekyll build on GitHub.
 
 ![GitHub Pages repo](/images/gh-pages-repo.png)
 
