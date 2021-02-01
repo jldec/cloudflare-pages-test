@@ -120,6 +120,10 @@ Cloudflare Pages [pricing](https://pages.cloudflare.com/#pricing) currently goes
 > The performance of all 3 platforms is excellent since they all serve static files from a CDN  
 > 🏃‍♀️
 
+
+_To leave a comment  
+please visit [dev.to/jldec](https://dev.to/jldec/first-steps-using-cloudflare-pages-40gp)_
+
 ---- #excerpt ----
 
 This is a walkthrough of my first Cloudflare Pages (Beta) site, and a comparison with GitHub Pages.
