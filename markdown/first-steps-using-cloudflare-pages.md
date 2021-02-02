@@ -10,7 +10,7 @@ My personal blog, [jldec.me](https://jldec.me), is hosted on [Netlify](https://n
 
 Cloudflare recently [announced](https://blog.cloudflare.com/cloudflare-pages/) a similar offering called [Cloudflare Pages](https://pages.cloudflare.com/). I was lucky enough to be given access to the Beta.
 
-Unlike [Netlify](https://www.netlify.com/pricing/#features), Cloudflare Pages [does not meter](https://pages.cloudflare.com/#pricing) request traffic. This opens the door for use-cases like CDN hosting of open source [ESM modules](https://jldec.me/migrating-from-cjs-to-esm) 🤔.
+Unlike [Netlify](https://www.netlify.com/pricing/#features), Cloudflare Pages [does not meter](https://pages.cloudflare.com/#pricing) request traffic. This opens the door for use-cases like CDN hosting of open source [ESM modules](/migrating-from-cjs-to-esm) 🤔.
 
 ## Cloudflare Pages (Beta)
 
