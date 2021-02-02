@@ -12,9 +12,9 @@ Cloudflare recently [announced](https://blog.cloudflare.com/cloudflare-pages/) a
 
 Unlike [Netlify](https://www.netlify.com/pricing/#features), Cloudflare Pages [does not meter](https://pages.cloudflare.com/#pricing) request traffic. This opens the door for use-cases like CDN hosting of open source [ESM modules](https://jldec.me/migrating-from-cjs-to-esm) 🤔.
 
-This is a walkthrough of setting up [jldec.eu](https://jldec.eu), a copy of [jldec.me](https://jldec.me), on Cloudflare Pages.
-
 ## Cloudflare Pages (Beta)
+
+This is a walkthrough of setting up [jldec.eu](https://jldec.eu), a copy of [jldec.me](https://jldec.me), on Cloudflare Pages.
 
 If you have access to Cloudflare Pages, you will see this button when you login to Cloudflare.
 
