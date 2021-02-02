@@ -115,7 +115,7 @@ The Cloudflare Pages Beta does not yet support redirects and functions, but thos
 
 Automating builds and deploys onto GitHub Pages is more work, and requires knowledge of GitHub Actions if you're not using Jekyll. There are other gotchas with GitHub Actions if you want to support concurrent builds or preview builds.
 
-Cloudflare Pages [pricing](https://pages.cloudflare.com/#pricing) currently goes up with build count and build concurrency, but not traffic. This opens the door for use-cases like CDN hosting of front-end modules, which can be prohibitive on other metered services like [Netlify](https://www.netlify.com/pricing/#features).
+Cloudflare Pages [pricing](https://pages.cloudflare.com/#pricing) currently goes up with build count and build concurrency, but request traffic is not metered. This opens the door for use-cases like CDN hosting of open source [ESM modules](https://jldec.me/migrating-from-cjs-to-esm), which can be prohibitive on metered services like [Netlify](https://www.netlify.com/pricing/#features).
 
 > The performance of all 3 platforms is excellent since they all serve static files from a CDN  
 > 🏃‍♀️
