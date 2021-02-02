@@ -10,6 +10,8 @@ My personal blog, [jldec.me](https://jldec.me), is hosted on [Netlify](https://n
 
 Cloudflare recently [announced](https://blog.cloudflare.com/cloudflare-pages/) a similar offering called [Cloudflare Pages](https://pages.cloudflare.com/). I was lucky enough to be given access to the Beta.
 
+Unlike [Netlify](https://www.netlify.com/pricing/#features), Cloudflare Pages [does not meter](https://pages.cloudflare.com/#pricing) request traffic. This opens the door for use-cases like CDN hosting of open source [ESM modules](https://jldec.me/migrating-from-cjs-to-esm) 🤔.
+
 This is a walkthrough of setting up [jldec.eu](https://jldec.eu), a copy of [jldec.me](https://jldec.me), on Cloudflare Pages.
 
 ## Cloudflare Pages (Beta)
@@ -114,8 +116,6 @@ The developer experience of hosting a site with CloudFlare Pages is very similar
 The Cloudflare Pages Beta does not yet support redirects and functions, but those are expected with the integration of [Cloudflare Workers](https://workers.cloudflare.com).
 
 Automating builds and deploys onto GitHub Pages is more work, and requires knowledge of GitHub Actions if you're not using Jekyll. There are other gotchas with GitHub Actions if you want to support concurrent builds or preview builds.
-
-Cloudflare Pages [pricing](https://pages.cloudflare.com/#pricing) currently goes up with build count and build concurrency, but request traffic is not metered. This opens the door for use-cases like CDN hosting of open source [ESM modules](https://jldec.me/migrating-from-cjs-to-esm), which can be prohibitive on metered services like [Netlify](https://www.netlify.com/pricing/#features).
 
 > The performance of all 3 platforms is excellent since they all serve static files from a CDN  
 > 🏃‍♀️
