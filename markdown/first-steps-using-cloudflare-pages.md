@@ -20,7 +20,7 @@ If you have access to Cloudflare Pages, you will see this button when you login 
 
 ![Cloudflare Pages Beta button on dashboard](/images/cf-pages-beta.png)
 
-The Pages button takes to your Pages projects -- of which there are none at first -- and a button to `Create a project`.
+The Pages button opens your Pages projects -- of which there are none at first -- and a button to `Create a project`.
 
 ![Pages - Create a project](/images/cf-pages-create-a-project.png)
 
