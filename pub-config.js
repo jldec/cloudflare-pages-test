@@ -1,7 +1,10 @@
+const DOMAIN = process.env.DOMAIN || 'jldec.me';
+const preview = !!process.env.PREVIEW;
+
 var opts = module.exports = {
 
-  docTitle: (process.env.JLDEC_UK ? 'jldec.uk' : 'jldec.eu'), // site name
-  appUrl: 'https://' + (process.env.JLDEC_UK ? 'jldec.uk' : 'jldec.eu'), // site url
+  docTitle: DOMAIN + (preview ? ' (preview)' : ''), // site name
+  appUrl: 'https://' + DOMAIN, // site url
   noRobots: true, // not ok to crawl
   throttleReload: '1s',
   linkNewWindow: true,
