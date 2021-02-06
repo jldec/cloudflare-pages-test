@@ -3,7 +3,7 @@ const PREVIEW = !!process.env.PREVIEW;
 
 var opts = module.exports = {
 
-  docTitle: DOMAIN + (PREVIEW ? ' (PREVIEW)' : ''), // site name
+  docTitle: DOMAIN + (PREVIEW ? ' (preview)' : ''), // site name
   appUrl: 'https://' + DOMAIN, // site url
   noRobots: true, // not ok to crawl
   throttleReload: '1s',

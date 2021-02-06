@@ -8,7 +8,7 @@ Contains markdown blog content to generate a static site using [pub-server](http
 
 ## build environment - see [pub-config.js](pub-config.js)
 - `DOMAIN` : for site name and fully qualified urls, e.g. in sitemap.xml.
-- `PREVIEW` : if set, also add ` (PREVIEW)` to the site name.
+- `PREVIEW` : if set, also add ` (preview)` to the site name.
 
 ## to edit content
 
