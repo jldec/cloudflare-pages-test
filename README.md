@@ -6,6 +6,10 @@ Contains markdown blog content to generate a static site using [pub-server](http
 - Cloudflare generates Cloudflare Pages site at [jldec.eu](https://jldec.eu)
 - GitHub Action generates GitHub Pages site at [jldec.uk](https://jldec.uk)
 
+## build environment - see [pub-config.js](pub-config.js)
+- `DOMAIN` : for site name and fully qualified urls, e.g. in sitemap.xml.
+- `PREVIEW` : if set, also add ` (PREVIEW)` to the site name.
+
 ## to edit content
 
 Clone https://github.com/jldec/cloudflare-pages-test, then
