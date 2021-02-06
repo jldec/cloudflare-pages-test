@@ -6,7 +6,7 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     env:
-      JLDEC_UK: TRUE
+      DOMAIN: jldec.uk
 
     steps:
     - name: checkout source repo
