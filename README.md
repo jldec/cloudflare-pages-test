@@ -3,7 +3,8 @@ Copy of the (private) source repo for [jldec.me](https://jldec.me).
 Contains markdown blog content to generate a static site using [pub-server](https://jldec.github.io/pub-doc).
 
 ## on push
-- Cloudflare generates Cloudflare Pages site at [jldec.eu](https://jldec.eu)
+- Vercel site at [jldec.fun](https://jldec.fun)
+- Cloudflare Pages site at [jldec.eu](https://jldec.eu)
 - GitHub Action generates GitHub Pages site at [jldec.uk](https://jldec.uk)
 
 ## build environment - see [pub-config.js](pub-config.js)
