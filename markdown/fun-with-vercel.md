@@ -12,7 +12,7 @@ Last week I wrote about [](first-steps-using-cloudflare-pages).
 
 ## [jldec.fun](https://jldec.fun/fun-with-vercel) 🤪
 
-This is a walkthough of how I deployed [jldec.fun](https://jldec.fun/) using the [Vercel platform](https://vercel.com/docs).
+This is a walkthrough of how I deployed [jldec.fun](https://jldec.fun/) using the [Vercel platform](https://vercel.com/docs).
 
 Markdown source files live in the same repo on [GitHub](https://github.com/jldec/cloudflare-pages-test) as before.
 
