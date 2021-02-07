@@ -106,8 +106,8 @@ I still have a lot to learn, but this exercise was a great way to start building
 
 > _!cogs 3x_
 
-> To leave a comment please visit  
-> [dev.to/jldec](https://dev.to/jldec/forays-from-node-to-rust-3fk1)
+_To leave a comment  
+please visit [dev.to/jldec](https://dev.to/jldec/forays-from-node-to-rust-3fk1)_
 
 ---- #excerpt ----
 

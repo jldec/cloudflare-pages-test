@@ -83,8 +83,8 @@ Once the DNS record was in place, the domain configuration changed to 'Valid'.
 > Static websites are awesome!  
 > _!thumbs-o-up 2x_
 
-> To leave a comment please visit  
-> [dev.to/jldec](https://dev.to/jldec/fun-with-vercel-3b6e)
+_To leave a comment  
+please visit [dev.to/jldec](https://dev.to/jldec/fun-with-vercel-3b6e)_
 
 ---- #excerpt ----
 

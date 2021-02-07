@@ -72,8 +72,8 @@ If you push the workflow above to a new repo on GitHub, the result should look l
 > _!gears_
 
 
-> To leave a comment please visit  
-> [dev.to/jldec](https://dev.to/jldec/github-actions-101-pfn)
+_To leave a comment  
+please visit [dev.to/jldec](https://dev.to/jldec/github-actions-101-pfn)_
 
 ---- #excerpt ----
 
