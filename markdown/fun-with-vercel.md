@@ -20,19 +20,19 @@ The Vercel signup starts a New Project workflow _(this could be simplified.)_
 
 ![Vercel new project workflow with link to GitHub](/images/vercel-new-project.png)
 
-'Continue with GitHub', then choose the first option in the dropdown.
+I clicked on 'Continue with GitHub', and then chose the first option in the dropdown below.
 
 ![Vercel add GitHub account dropdown](/images/vercel-add-github-account.png)
 
-This leads to the GitHub form for granting repo access to the 'Vercel' GitHub app. (_Look for it later in your [GitHub Settings](https://github.com/settings/installations) to add more repos, or to revoke access._)
+This led to the GitHub form for granting repo access to the 'Vercel' GitHub app. (_Look for it later in your [GitHub Settings](https://github.com/settings/installations) to add more repos, or to revoke access._)
 
 ![Authorize Vercel app on GitHub](/images/vercel-github-app.png)
 
-Back on Vercel, select a repo and confirm the project scope. Team scope requires a paid plan.
+Back on Vercel, I selected my repo and used my 'Personal Account' scope. Team scope requires a paid plan.
 
 ![Select scope for the new project](/images/vercel-select-project-scope.png)
 
-Select the project directory within the repo - usually this will be the root.
+I continued with the default (root) project directory within the repo.
 
 ![Select project direcotry inside repo](/images/vercel-select-directory.png)
 

@@ -32,7 +32,8 @@ var opts = module.exports = {
     './favicon.ico',
     './CNAME',
     './.nojekyll',
-    './cloudflare-pages-test-log-1.txt'
+    './cloudflare-pages-test-log-1.txt',
+    './vercel.json'
   ],
 
   outputs: [
