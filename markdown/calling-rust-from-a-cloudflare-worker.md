@@ -151,6 +151,8 @@ The result: https://jldec.net/wasm-worker?n=123456789012345678
 
 ##  🦀 Keep 🦀 Digging 🦀
 
+_To leave a comment  
+please visit [dev.to/jldec](https://dev.to/jldec/calling-rust-from-a-cloudflare-worker-17b4)_
 
 ---- #excerpt ----
 
