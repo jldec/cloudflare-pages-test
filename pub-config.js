@@ -5,6 +5,7 @@ var opts = module.exports = {
 
   docTitle: DOMAIN + (PREVIEW ? ' (preview)' : ''), // site name
   appUrl: 'https://' + DOMAIN, // site url
+  canonicalUrl: 'https://jldec.me',
   noRobots: true, // not ok to crawl
   throttleReload: '1s',
   linkNewWindow: true,
