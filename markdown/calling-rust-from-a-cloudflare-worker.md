@@ -16,7 +16,7 @@ Rust is a popular language for writing code compiled to WebAssembly. This is not
 
 ## Cloudflare Workers
 
-[Cloudflare Workers]() offers a low-cost, low-latency, serverless platform, making it an ideal complement for statically generated websites. Cloudflare Workers use [V8](https://github.com/v8/v8#readme), the same open source JavaScript engine from Google which is used in [Node.js](https://nodejs.org/en/about/) and [Deno](https://deno.land/).
+[Cloudflare Workers](https://workers.cloudflare.com/) offers a low-cost, low-latency, serverless platform, making it an ideal complement for statically generated websites. Cloudflare Workers use [V8](https://github.com/v8/v8#readme), the same open source JavaScript engine from Google which is used in [Node.js](https://nodejs.org/en/about/) and [Deno](https://deno.land/).
 
 The [APIs](https://developers.cloudflare.com/workers/runtime-apis) available to Cloudflare Workers are very limited - Unlike Node, there is no module loader and no access to the host platform.
 
