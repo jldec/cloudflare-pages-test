@@ -10,7 +10,9 @@ From the [WebAssembly spec](https://webassembly.github.io/spec/core/intro/introd
 
 > WebAssembly (abbreviated wasm) is a safe, portable, low-level code format designed for efficient execution and compact representation.
 
-Rust is a popular language for writing code compiled to WebAssembly. This is not just because of Rust's minimal runtime needs, but also because of its community and [tools](/forays-from-node-to-rust#first-impressions).
+WebAssembly is the first new runnable format supported by all major browsers. It is also showing promise as a standardized way to deploy code to edge environments.
+
+Rust is a popular language for writing code compiled to WebAssembly. This is not just because of Rust's minimal runtime needs, but also because of its community and [tools](https://jldec.me/forays-from-node-to-rust#first-impressions).
 
 ## Cloudflare Workers
 
@@ -70,7 +72,7 @@ Now browse to http://127.0.0.1:8787
 
 ## Modifications
 
-For learning purposes, I prefer to pare sample code down to a minimum.
+For learning purposes, I pared the code down and pushed it to [jldec/wasm-worker](https://github.com/jldec/wasm-worker).
 
 - Removed unused files: `.appveyor.yml`, `.travis.yml`, `.cargo-ok`
 - Removed `worker/metadata_wasm.json` - no longer used by wrangler
