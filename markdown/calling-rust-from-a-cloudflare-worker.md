@@ -146,7 +146,7 @@ $ wrangler publish
  https://wasm-worker.jldec.workers.dev
 ```
 
-The result: https://jldec.net/wasm-worker?n=123456789012345678
+You can run the result at https://jldec.net/wasm-worker?n=123456789012345678 - Round-trip response times in my area average under 30ms.
 
 ![hello	"from wasm-worker" n "123456789012345678" words	"one hundred and twenty three quadrillion four hundred and fifty six trillion seven hundred and eighty nine billion twelve million three hundred and forty five thousand six hundred and seventy eight"](/images/worker-request.png)
 
