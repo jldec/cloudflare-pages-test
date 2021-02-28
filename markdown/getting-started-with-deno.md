@@ -110,7 +110,7 @@ async function checkUrl(url, base) {
       urlMap[href] = 'OK';
 
       // parse response
-      console.log('parsing', href);
+      console.log('parsing', urlObj.pathname);
       const html = await res.text();
       const document = parse5.parse(html);
 
