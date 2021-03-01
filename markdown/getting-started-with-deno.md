@@ -60,11 +60,11 @@ I find the TypeScript declarations most useful for code completion in VS Code.
 
 ## scan.js
 
-In the spirit of leveraging Deno as a web client, I decided to try building a simple link validator. This requires a 3rd-party library to parse HTML, so it would also serve as a primer on using ESM modules in Deno.
+In the spirit of leveraging Deno as a web client, I decided to try building a simple link validator. This requires a 3rd-party library to parse HTML, making it an exercise in how to use ESM modules in Deno.
 
 I started my search assuming that a popular npm module would be my best bet, even if it wasn't available (yet) in [deno.land/x](https://deno.land/x) which is where library authors can register their GitHub repos to publish deno-compatible ESM modules.
 
-After some googling, I landed on [parse5](https://github.com/inikulin/parse5) which appeared to have wide usage and offered a simple, low-level tree API at its core.
+After some googling, I landed on [parse5](https://github.com/inikulin/parse5) which enjoys wide usage and offers a simple, low-level tree API at its core.
 
 I had also heard about [Skypack](https://docs.skypack.dev/skypack-cdn/code/deno), a CDN, specifically designed to serve npm packages as ESM modules. A quick search on [skypack.dev](https://www.skypack.dev/) and I had a URL for the parse5 module which works in Deno.
 
@@ -174,7 +174,7 @@ NOTE: For this first implementation, there is no queueing, so I would not recomm
 
 ## Compiling
 
-The deno experience is still a little rough in places, but one new feature which I really like, is the ability to [compile](https://deno.land/manual/tools/compiler) a script into a self-contained executable.
+The deno experience still feels a little rough in places, but one new feature which I really like, is the ability to [compile](https://deno.land/manual/tools/compiler) a script into a self-contained executable.
 
 ```sh
 $ deno --unstable compile --allow-net scan.js
