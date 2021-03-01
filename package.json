@@ -6,7 +6,7 @@
   "main": "pub-config.js",
   "dependencies": {
     "pub-server": "^2.7.4",
-    "pub-theme-pubblog": "^1.2.10"
+    "pub-theme-pubblog": "^1.3.0"
   },
   "scripts": {
     "start": "pub",

@@ -200,7 +200,7 @@ $ ./scan https://jldec.fun
 🎉 no broken links found.
 ```
 
-> [![Deno logo](/images/deno-logo.png "width=150")](https://deno.land/)
+> [![Deno logo](/images/deno-logo.png ".no-border")](https://deno.land/)
 
 _To leave a comment  
 please visit [dev.to/jldec](https://dev.to/jldec/getting-started-with-deno-2ie7)_
