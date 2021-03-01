@@ -106,7 +106,13 @@ async function checkUrl(url, base) {
       // fetch from href
       urlMap[href] = 'pending';
       const res = await fetch(href);
-      if (!res.ok) return urlMap[href] = { status: res.status, in: base }
+
+      // bail out if fetch was not ok
+      if (!res.ok) {
+        urlMap[href] = { status: res.status, in: base };
+        return;
+      }
+
       urlMap[href] = 'OK';
 
       // parse response
