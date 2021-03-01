@@ -60,7 +60,7 @@ I find the TypeScript declarations most useful for code completion in VS Code.
 
 ## scan.js
 
-In the spirit of leveraging Deno as a web client, I decided to try building a simple link validator. This requires a 3rd-party library to parse HTML, making it an exercise in how to use ESM modules in Deno.
+In the spirit of leveraging Deno as a web client, I decided to try building a simple link validator. This requires a 3rd-party library to parse HTML.
 
 I started my search assuming that a popular npm module would be my best bet, even if it wasn't available (yet) in [deno.land/x](https://deno.land/x) which is where library authors can register their GitHub repos to publish deno-compatible ESM modules.
 
