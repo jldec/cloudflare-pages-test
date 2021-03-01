@@ -68,7 +68,7 @@ After some googling, I landed on [parse5](https://github.com/inikulin/parse5) wh
 
 I had also heard about [Skypack](https://docs.skypack.dev/skypack-cdn/code/deno), a CDN, specifically designed to serve npm packages as ESM modules. A quick search on [skypack.dev](https://www.skypack.dev/) and I had a URL for the parse5 module which works in Deno.
 
-The code in [scan.js](https://github.com/jldec/deno-hello/tree/main/hello.js) crawls a website, validating that all the links on the site which point to the same origin can be fetched.
+The code in [scan.js](https://github.com/jldec/deno-hello/blob/main/scan.js) crawls a website, validating that all the links on the site which point to the same origin can be fetched.
 
 ```js
 import parse5 from 'https://cdn.skypack.dev/parse5?dts';
