@@ -116,12 +116,15 @@ async function checkUrl(url, base) {
 
       urlMap[href] = "OK";
 
+      // check content type
+      if (!res.headers.get("content-type").match(/text\/html/i)) return;
+
       // parse response
       console.log("parsing", urlObj.pathname);
       const html = await res.text();
       const document = parse5.parse(html);
 
-      // scan for <a> tags and call checkURL for each href
+      // scan for <a> tags and call checkURL for each, with base = href
       const promises = [];
       scan(document, "a", (node) => {
         promises.push(checkUrl(attr(node, "href"), href));
@@ -156,10 +159,12 @@ function exit(code, msg) {
 }
 ```
 
-To run the script, call `deno run --allow-net scan.js URL`. E.g.
+This script is hosted at https://deno-hello.jldec.me/ using [Cloudflare Pages](https://jldec.me/first-steps-using-cloudflare-pages).
+
+To run it, call `deno run --allow-net SCRIPT URL`. E.g.
 
 ```sh
-$ deno run --allow-net scan.js https://jldec.me
+$ deno run --allow-net https://deno-hello.jldec.me/scan.js https://jldec.me
 parsing /
 parsing /getting-started-with-deno
 parsing /first-steps-using-cloudflare-pages
