@@ -34,21 +34,23 @@ I recommend installing the Deno [VS Code extension](https://github.com/denoland/
 Here is [hello.js](https://github.com/jldec/deno-hello/tree/main/hello.js), my first Deno program. You can run it with `deno run hello.js args...`
 
 ```js
-const hello = 'Hello Deno';
+const hello = "Hello Deno";
 console.log(`${hello} %s hello %o`, new Date(), Deno.args);
 
-const buf = new TextEncoder().encode('-🦀-\n');
+const buf = new TextEncoder().encode("-🦀-\n");
 await Deno.stdout.write(buf);
 console.table(buf);
 ```
 
 The easiest way to write to stdout is by using the built-in console.log().
 
+For those curious about Deno internals:
+
 - The global `console` object is created in [runtime/js/99_main.js](https://github.com/denoland/deno/blob/v1.7.5/runtime/js/99_main.js#L246).
 - The `console.log()` method lives in [runtime/js/02_console.js](https://github.com/denoland/deno/blob/v1.7.5/runtime/js/02_console.js#L1503).
 - This calls the rust function `core.print` in [core/bindings.rs](https://github.com/denoland/deno/blob/v1.7.5/core/bindings.rs#L277).
 
-[Deno.stdout]() provides a lower level stream interface. Notice the top-level `await` on the promise returned by 'Deno.stdout.write()'.
+[Deno.stdout]() provides a lower level stream interface. Notice the `await` on the promise returned by 'Deno.stdout.write()'.
 
 ### Typescript
 
@@ -71,22 +73,22 @@ I had also heard about [Skypack](https://docs.skypack.dev/skypack-cdn/code/deno)
 The code in [scan.js](https://github.com/jldec/deno-hello/blob/main/scan.js) crawls a website, validating that all the links on the site which point to the same origin can be fetched.
 
 ```js
-import parse5 from 'https://cdn.skypack.dev/parse5?dts';
+import parse5 from "https://cdn.skypack.dev/parse5?dts";
 
 const rootUrl = Deno.args[0];
-if (!rootUrl) exit(1, 'Please provide a URL');
+if (!rootUrl) exit(1, "Please provide a URL");
 
-const rootOrigin = (new URL(rootUrl)).origin;
+const rootOrigin = new URL(rootUrl).origin;
 
 const urlMap = {}; // tracks visited urls
 
 await checkUrl(rootUrl);
-const result = Object.entries(urlMap).filter( kv => kv[1] !== 'OK');
+const result = Object.entries(urlMap).filter((kv) => kv[1] !== "OK");
 
 if (result.length) {
   exit(1, result);
 } else {
-  exit(0, '🎉 no broken links found.');
+  exit(0, "🎉 no broken links found.");
 }
 
 // recursively checks url and same-origin urls inside
@@ -102,9 +104,8 @@ async function checkUrl(url, base) {
 
     // only process same-origin urls
     if (!urlMap[href] && urlObj.origin === rootOrigin) {
-
       // fetch from href
-      urlMap[href] = 'pending';
+      urlMap[href] = "pending";
       const res = await fetch(href);
 
       // bail out if fetch was not ok
@@ -113,29 +114,28 @@ async function checkUrl(url, base) {
         return;
       }
 
-      urlMap[href] = 'OK';
+      urlMap[href] = "OK";
 
       // parse response
-      console.log('parsing', urlObj.pathname);
+      console.log("parsing", urlObj.pathname);
       const html = await res.text();
       const document = parse5.parse(html);
 
       // scan for <a> tags and call checkURL for each href
       const promises = [];
-      scan(document, 'a', node => {
-        promises.push(checkUrl(attr(node, 'href'), href));
+      scan(document, "a", (node) => {
+        promises.push(checkUrl(attr(node, "href"), href));
       });
       await Promise.all(promises);
     }
-  }
-  catch(err) {
-    urlMap[url] =  { error: err.message, in: base };
+  } catch (err) {
+    urlMap[url] = { error: err.message, in: base };
   }
 }
 
 // return value of attr with name for a node
 function attr(node, name) {
-  return node.attrs.find( attr => attr.name === name )?.value;
+  return node.attrs.find((attr) => attr.name === name)?.value;
 }
 
 // recursive DOM scan
