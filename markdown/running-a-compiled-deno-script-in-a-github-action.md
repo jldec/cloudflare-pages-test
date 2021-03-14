@@ -58,7 +58,7 @@ In this case, I modified the [workflow](https://github.com/jldec/cloudflare-page
 
 Both commands are defined as scripts in [package.json](https://github.com/jldec/cloudflare-pages-test/blob/main/package.json).
 
-`curl -LO` downloads the Linux binary from the GitHub release described earlier.
+`curl -LO` downloads the Linux binary from the GitHub release. Running curl here gives the preview server time to start listening on port 3001, before commencing the scan.
 
 ## Success
 
