@@ -127,7 +127,6 @@ Automating builds and deploys onto GitHub Pages is more work, and requires knowl
 _To leave a comment  
 please visit [dev.to/jldec](https://dev.to/jldec/first-steps-using-cloudflare-pages-40gp)_
 
-Intentionally [broken link](/broken-link)
 
 ---- #excerpt ----
 
