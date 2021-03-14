@@ -25,8 +25,8 @@ jobs:
         rm -r out/*
         npm run generate
         npm run preview &
-        curl -LO https://github.com/jldec/deno-hello/raw/main/scan-linux && chmod +x scan-linux
-        ./scan-linux http://localhost:3001/
+        curl -LO https://github.com/jldec/deno-hello/releases/download/v1.0.0/scan-linux-x86 && chmod +x scan-linux-x86
+        ./scan-linux-x86 http://localhost:3001/
         cd out
         git config user.email "jldec@ciaosoft.com"
         git config user.name "cloudflare-pages-test generate action"
