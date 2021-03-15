@@ -66,7 +66,7 @@ When the `scan-linux-x86` command finds no broken links in the static site, it e
 
 ![scan success in GitHub Action log output](/images/scan-success.png)
 
-If there are broken links the workflow will [fail](https://github.com/jldec/cloudflare-pages-test/runs/2107446999?check_suite_focus=true#step:4:59), and I will hear about it in my inbox :)
+If there are broken links the workflow will [fail](https://github.com/jldec/cloudflare-pages-test/runs/2106962300?check_suite_focus=true), and I will hear about it in my inbox :)
 
 ![scan failure in GitHub Action log output](/images/scan-failure.png)
 
