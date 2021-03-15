@@ -62,7 +62,7 @@ Both commands are defined as scripts in [package.json](https://github.com/jldec/
 
 ## Success
 
-When the `scan-linux-x86` command finds no broken links in the static site, it exits with 0, allowing the GitHub Action [workflow](https://github.com/jldec/cloudflare-pages-test/runs/2107446999?check_suite_focus=true#step:4:59) to continue.
+When the `scan-linux-x86` command finds no broken links in the static site, it exits with 0, allowing the GitHub Action [workflow]https://github.com/jldec/cloudflare-pages-test/runs/2112253519?check_suite_focus=true#step:4:72) to continue.
 
 ![scan success in GitHub Action log output](/images/scan-success.png)
 
