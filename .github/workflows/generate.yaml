@@ -22,15 +22,13 @@ jobs:
     - name: generate output
       run: |
         npm ci
-        rm -r out/*
         npm run generate
         npm run preview &
-        curl -LO https://github.com/jldec/deno-hello/releases/download/v1.0.0/scan-linux-x86 && chmod +x scan-linux-x86
+        curl -LO https://github.com/jldec/deno-hello/releases/download/v1.0.2/scan-linux-x86 && chmod +x scan-linux-x86
         ./scan-linux-x86 http://localhost:3001/
         cd out
         git config user.email "jldec@ciaosoft.com"
         git config user.name "cloudflare-pages-test generate action"
-        git status
         git add -A
         if ! git diff-index --quiet HEAD ; then git commit -m 'https://github.com/jldec/cloudflare-pages-test/actions/runs/${{ github.run_id }}' && git push ; fi
         echo done
