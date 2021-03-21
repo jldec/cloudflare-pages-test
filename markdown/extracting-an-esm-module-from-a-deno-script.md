@@ -76,6 +76,10 @@ This is why, for now, the API above expects the `parse5` module dependency as a 
 > 🚀
 
 
+---- #excerpt ----
+
+Extracting the crawler code into its own [ESM module](/migrating-from-cjs-to-esm) so that it can be used with Node.js or in the browser -- in other words -- not just from Deno.
+
 
 
 
