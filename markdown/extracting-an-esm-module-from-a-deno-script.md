@@ -6,7 +6,7 @@ template: post
 
 This is another followup to my recent post about [Getting Started with Deno](/getting-started-with-deno).
 
-I thought it would make sense extract the crawler code into its own [ESM module](/migrating-from-cjs-to-esm) so that it can also be used with Node.js or in the browser.
+I thought it would make sense to extract the crawler code into its own [ESM module](/migrating-from-cjs-to-esm) so that it can also be used with Node.js or in the browser.
 
 The resulting [API](https://github.com/jldec/deno-hello/blob/main/scanurl.mjs#L18) is a bit ugly because it expects parse5 and fetch as parameters, but it works  .
 
