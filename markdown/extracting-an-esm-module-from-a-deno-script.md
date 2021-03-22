@@ -104,7 +104,8 @@ Where there's a problem, there's an opportunity!
 
 # 🚀
 
-
+_To leave a comment  
+please visit [dev.to/jldec](https://dev.to/jldec/extracting-an-esm-module-from-a-deno-script-28il)_
 
 ---- #excerpt ----
 
