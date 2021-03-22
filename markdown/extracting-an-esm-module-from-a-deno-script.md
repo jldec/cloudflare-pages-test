@@ -98,7 +98,7 @@ The result is that modules which depend on other modules are not portable betwee
 
 And this is why, for now, the API above expects the `parse5` module dependency as a parameter.
 
-> The big question is whether the NPM ecosystem will evolve to support nested ESM modules, or whether some other organization with a workable trust model will emerge to replace it?
+> The big question is whether the NPM ecosystem will evolve to support nested ESM modules, or whether some other organization with a workable trust model will emerge to replace it.
 
 Where there's a problem, there's an opportunity!
 
