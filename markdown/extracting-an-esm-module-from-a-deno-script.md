@@ -46,7 +46,7 @@ Note that the usual browser CORS restrictions also apply to ESM modules, and to 
 I have published [scanode](https://www.npmjs.com/package/scanode) as a package on npm. If you have Node, you can run it with 'npx' or install it using 'npm install'.
 
 ```
-$ npx scanode http://jldec.me
+$ npx scanode https://jldec.me
 npx: installed 3 in 0.987s
 parsing /
 ...
