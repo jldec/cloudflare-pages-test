@@ -3,6 +3,19 @@ title: Extracting an ESM module from a Deno script
 image: images/persewide.jpg
 date: 2021-03-21
 template: post
+metap-og;title: Extracting an ESM module from a Deno script
+metap-og;image: https://jldec.me/images/persewide.jpg
+metap-og;type: article
+metap-og;url: https://jldec.me/extracting-an-esm-module-from-a-deno-script
+metap-og;description: Will the NPM ecosystem evolve to support nested ESM modules?
+meta-twitter;site: @jldec
+meta-twitter;creator: @jldec
+meta-twitter;title: Extracting an ESM module from a Deno script
+meta-twitter;description: Will the NPM ecosystem evolve to support nested ESM modules?
+meta-twitter;card: summary_large_image
+meta-twitter;widgets;new-embed-design: on
+meta-twitter;image: https://jldec.me/images/persewide.jpg
+meta-twitter;image;alt: Sunny day in Cambridge UK
 
 This is another followup to my recent post about [Getting Started with Deno](/getting-started-with-deno).
 
