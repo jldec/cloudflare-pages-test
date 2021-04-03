@@ -3,6 +3,19 @@ title: Getting started with Go
 image: images/church-blossoms.jpg
 date: 2021-04-03
 template: post
+metap-og;title: Getting started with Go
+metap-og;image: https://jldec.me/images/church-blossoms.jpg
+metap-og;type: article
+metap-og;url: https://jldec.me/getting-started-with-go
+metap-og;description: My experience as a new user of Go, building my first Go library
+meta-twitter;site: @jldec
+meta-twitter;creator: @jldec
+meta-twitter;title: Getting started with Go
+meta-twitter;description: My experience as a new user of Go, building my first Go library
+meta-twitter;card: summary_large_image
+meta-twitter;widgets;new-embed-design: on
+meta-twitter;image: https://jldec.me/images/church-blossoms.jpg
+meta-twitter;image;alt: Blossoms in Cambridge UK
 
 ## Golang
 
