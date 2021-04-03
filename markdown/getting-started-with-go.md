@@ -169,7 +169,7 @@ var numwords = map[uint64]string{
 
 ## Dependency management
 
-Until quite recently, Go [did not have](https://research.swtch.com/vgo-intro#versioning_and_api_stability) built-in package versioning like [npm](/migrating-from-cjs-to-esm) or [cargo](/forays-from-node-to-rust). This led to incompatibile versioning add-ons, like [godep](https://github.com/tools/godep) and [glide](https://github.com/Masterminds/glide), which made packages with nested dependencies difficult to consume. E.g. see this old [INSTALL.md]((https://github.com/kubernetes/client-go/blob/416948da08dfd61cd4a08a3d679865ce91ff39b6/INSTALL.md#dependency-management-for-the-serious-or-reluctant-user)) from kubernetes/client-go.
+Until quite recently, Go [did not have](https://research.swtch.com/vgo-intro#versioning_and_api_stability) built-in package versioning like [npm](/migrating-from-cjs-to-esm) or [cargo](/forays-from-node-to-rust). This led to incompatibile versioning add-ons, like [godep](https://github.com/tools/godep) and [glide](https://github.com/Masterminds/glide), which made packages with nested dependencies difficult to consume. E.g. see this old [INSTALL.md](https://github.com/kubernetes/client-go/blob/416948da08dfd61cd4a08a3d679865ce91ff39b6/INSTALL.md#dependency-management-for-the-serious-or-reluctant-user) from kubernetes/client-go.
 
 > Fortunately, [Go modules](https://blog.golang.org/using-go-modules) are enabled as the default in Go since [v1.16](https://blog.golang.org/go116-module-changes).
 
