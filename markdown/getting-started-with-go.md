@@ -202,6 +202,8 @@ It turns out that fetching any versioned module with `go get`, automatically add
 > How about using a similar scheme to create a vendor-neutral registry for [ESM modules](/extracting-an-esm-module-from-a-deno-script)?  
 🤔
 
+_To leave a comment  
+please visit [dev.to/jldec](https://dev.to/jldec/getting-started-with-go-2m9e)_
 
 ---- #excerpt ----
 
