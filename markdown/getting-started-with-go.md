@@ -19,7 +19,7 @@ meta-twitter;image;alt: Blossoms in Cambridge UK
 
 ## Golang
 
-The [Go](https://go.dev/) programming language has become an important tool for developers, particularly for platforms like Kubernetes and Docker.
+The [Go](https://go.dev/) programming language has become an important tool for developers, particularly around platforms like Kubernetes and Docker.
 
 Go was created at Google by a team whose roots go back to Bell Labs and [C](https://en.wikipedia.org/wiki/C_(programming_language)). Their [motivations](https://talks.golang.org/2012/splash.article) included fast compilation time, and productive development of large scale distributed systems, handling high volumes of concurrent requests.
 
@@ -29,7 +29,7 @@ This article describes my experience as a new user of Go, building my first Go l
 
 I followed the 'hello world' getting started docs at [golang.org](https://golang.org/doc/tutorial/getting-started#code).
 
-Instead of depending on the macOS [installer](https://golang.org/doc/manage-install) which copies everything into `/usr/local/go`, I opted to download the latest release from https://golang.org/dl/ into a versioned [$GOROOT](https://golang.org/doc/install/source#goroot) under my home directory. Here's what I have in my '.bash_profile':
+Instead of depending on the macOS [installer](https://golang.org/doc/manage-install) which copies everything into `/usr/local/go`, I opted to download the latest release from https://golang.org/dl/ into a versioned [$GOROOT](https://golang.org/doc/install/source#environment) under my home directory. Here's what I have in my '.bash_profile':
 
 ```sh
 export GOPATH=~/go
