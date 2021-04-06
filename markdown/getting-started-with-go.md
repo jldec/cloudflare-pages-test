@@ -207,5 +207,5 @@ please visit [dev.to/jldec](https://dev.to/jldec/getting-started-with-go-2m9e)_
 
 ---- #excerpt ----
 
-The [Go](https://go.dev/) programming language has become an important tool for developers, particularly for platforms like Kubernetes and Docker.
+The [Go](https://go.dev/) programming language has become an important tool for developers, particularly around platforms like Kubernetes and Docker.
 
