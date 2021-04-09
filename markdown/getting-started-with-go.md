@@ -29,7 +29,7 @@ This article describes my experience as a new user of Go, building my first Go l
 
 The [Tour of Go](https://tour.golang.org/basics/1) is a great way to get familiar with the language syntax. I started with 'hello world' at [golang.org](https://golang.org/doc/tutorial/getting-started#install), and found myself going back to the tour for different topics.
 
-[![Screenshot of the Go Tour showing code and navigation](/images/go-tour.png)](https://tour.golang.org/basics/1)
+[![Screenshot of the Go Tour showing code and navigation](/images/go-tour.png ".no-border")](https://tour.golang.org/basics/1)
 
 The macOS [installer](https://golang.org/doc/manage-install) copies everything into `/usr/local/go`, so I opted to download the latest release from https://golang.org/dl/ into a versioned [$GOROOT](https://golang.org/doc/install/source#environment) under my home directory. Here's what I have in my '.bash_profile':
 
@@ -168,6 +168,35 @@ var numwords = map[uint64]string{
 	1_000_000_000_000_000: "quadrillion",
 }
 ```
+
+## Tests and benchmarks
+
+The [testing](https://pkg.go.dev/testing) package provides support for running tests and benchmarks with `go test`. The GitHub Action [workflow](https://github.com/jldec/shortscale-go/blob/main/.github/workflows/ci.yaml#L25) for shortscale-go make use of this.
+
+Out of curiosity, I ran [BenchmarkShortscale](https://github.com/jldec/shortscale-go/blob/358a49f24dcb9d4b2c697233f37f5dea4c87d318/shortscale_test.go#L18) for two variants of the Shortscale function, one which [pre-allocates](https://github.com/jldec/shortscale-go/blob/358a49f24dcb9d4b2c697233f37f5dea4c87d318/shortscale.go#L18) memory for string.Builder, and one which does not. Pre-allocating, reduced the number of allocs/op from 6 to 1, improving ns/op by about 150ns.
+
+**Pre-allocated**
+```
+$ go test -bench . -benchmem
+goos: darwin
+goarch: amd64
+pkg: github.com/jldec/shortscale-go
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+
+2428737	       484.7 ns/op	     240 B/op	       1 allocs/op
+```
+
+**Not pre-allocated**
+```
+$ go test -bench . -benchmem
+goos: darwin
+goarch: amd64
+pkg: github.com/jldec/shortscale-go
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+
+1839627	       642.7 ns/op	     504 B/op	       6 allocs/op
+```
+
 
 ## Dependency management
 
