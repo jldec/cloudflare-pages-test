@@ -27,9 +27,9 @@ This article describes my experience as a new user of Go, building my first Go l
 
 ## Getting started
 
-I followed the 'hello world' getting started docs at [golang.org](https://golang.org/doc/tutorial/getting-started#code).
+The [Tour of Go](https://tour.golang.org/basics/1) is a great way to get familiar with the language syntax. I started with 'hello world' at [golang.org](https://golang.org/doc/tutorial/getting-started#install), and found myself going back to the tour for different topics.
 
-Instead of depending on the macOS [installer](https://golang.org/doc/manage-install) which copies everything into `/usr/local/go`, I opted to download the latest release from https://golang.org/dl/ into a versioned [$GOROOT](https://golang.org/doc/install/source#environment) under my home directory. Here's what I have in my '.bash_profile':
+The macOS [installer](https://golang.org/doc/manage-install) copies everything into `/usr/local/go`, so I opted to download the latest release from https://golang.org/dl/ into a versioned [$GOROOT](https://golang.org/doc/install/source#environment) under my home directory. Here's what I have in my '.bash_profile':
 
 ```sh
 export GOPATH=~/go
