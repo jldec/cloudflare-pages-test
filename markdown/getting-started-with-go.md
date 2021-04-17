@@ -74,15 +74,14 @@ func Shortscale(n uint64) string {
 	if n > 999_999_999_999_999_999 {
 		return "(big number)"
 	}
-	var b strings.Builder
-	b.Grow(238)
-	writeScale(&b, n, 1_000_000_000_000_000) // quadrillions
-	writeScale(&b, n, 1_000_000_000_000)     // trillions
-	writeScale(&b, n, 1_000_000_000)         // billions
-	writeScale(&b, n, 1_000_000)             // millions
-	writeScale(&b, n, 1_000)                 // thousands
-	writeHundreds(&b, n)
-	writeTensAndUnits(&b, n, b.Len() > 0)
+	b := new(strings.Builder)
+	writeScale(b, n, 1_000_000_000_000_000) // quadrillions
+	writeScale(b, n, 1_000_000_000_000)     // trillions
+	writeScale(b, n, 1_000_000_000)         // billions
+	writeScale(b, n, 1_000_000)             // millions
+	writeScale(b, n, 1_000)                 // thousands
+	writeHundreds(b, n)
+	writeTensAndUnits(b, n, b.Len() > 0)
 	return b.String()
 }
 
@@ -173,7 +172,7 @@ var numwords = map[uint64]string{
 
 The [testing](https://pkg.go.dev/testing) package provides support for running tests and benchmarks with `go test`. The GitHub Action [workflow](https://github.com/jldec/shortscale-go/blob/main/.github/workflows/ci.yaml#L25) for shortscale-go make use of this.
 
-Out of curiosity, I ran [BenchmarkShortscale](https://github.com/jldec/shortscale-go/blob/358a49f24dcb9d4b2c697233f37f5dea4c87d318/shortscale_test.go#L18) for two variants of the Shortscale function, one which [pre-allocates](https://github.com/jldec/shortscale-go/blob/358a49f24dcb9d4b2c697233f37f5dea4c87d318/shortscale.go#L18) memory for string.Builder, and one which does not. Pre-allocating, reduced the number of allocs/op from 6 to 1, improving ns/op by about 150ns.
+Out of curiosity, I ran [BenchmarkShortscale]https://github.com/jldec/shortscale-go/blob/main/shortscale_test.go#L24) for two variants of the Shortscale function, one which [pre-allocates](https://github.com/jldec/shortscale-go/blob/358a49f24dcb9d4b2c697233f37f5dea4c87d318/shortscale.go#L18) memory for string.Builder, and one which does not. Pre-allocating, reduced the number of allocs/op from 4 to 1, improving ns/op by about 85ns.
 
 **Pre-allocated**
 ```
@@ -183,7 +182,7 @@ goarch: amd64
 pkg: github.com/jldec/shortscale-go
 cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
 
-2428737	       484.7 ns/op	     240 B/op	       1 allocs/op
+5694252	       205.5 ns/op	      64 B/op	       1 allocs/op
 ```
 
 **Not pre-allocated**
@@ -194,7 +193,7 @@ goarch: amd64
 pkg: github.com/jldec/shortscale-go
 cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
 
-1839627	       642.7 ns/op	     504 B/op	       6 allocs/op
+4100697	       292.9 ns/op	     120 B/op	       4 allocs/op
 ```
 
 
