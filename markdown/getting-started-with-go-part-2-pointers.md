@@ -149,7 +149,7 @@ func main() {
 > ✨ Keep learning! ✨
 
 _To leave a comment  
-please visit [dev.to/jldec](getting-started-with-go-part-2-pointers-4a47)_
+please visit [dev.to/jldec](https://dev.to/jldec/getting-started-with-go-part-2-pointers-4a47)_
 
 ---- #excerpt ----
 
