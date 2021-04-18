@@ -47,7 +47,7 @@ Notice that `var b` is an instance of the Builder.
 
 ## Pointer receiver methods and interfaces
 
-The first argument to Fprintf is `&b`, a [pointer](https://tour.golang.org/moretypes/1) to b. This is necessary, because Fprintf expects an [io.Writer](https://pkg.go.dev/io#Writer) interface which is satisfied by the [Builder.Write](https://pkg.go.dev/strings#Builder.Write) method which has a `*Builder` pointer receiver.
+The first argument to fmt.Fprintf is `&b`, a [pointer](https://tour.golang.org/moretypes/1) to b. This is necessary, because Fprintf expects an [io.Writer](https://pkg.go.dev/io#Writer) interface which is satisfied by the [Builder.Write](https://pkg.go.dev/strings#Builder.Write) method which has a `*Builder` pointer receiver.
 
 I was tempted to replace `Fprintf(&b, ...)` with `Fprintf(b, ...)`, to make it more consistent with the `b.WriteString` and `b.String` Builder method calls further down, but doing this causes the compiler to complain:
 
@@ -73,9 +73,9 @@ func write(b strings.Builder, s string) {
 }
 ```
 
-Running the code above in the [example sandbox](https://pkg.go.dev/strings#Builder)) outputs just the word _ignition_. 
+Running the code above in the [example sandbox](https://pkg.go.dev/strings#Builder) outputs just the word _ignition_.
 
-This suggests that the 3 calls to `write(b)` did not actually modify b, which makes sense, because passing a struct type to a function [copies](https://tour.golang.org/methods/4) the struct value instead of passing a reference to it.
+This suggests that the 3 calls to `write(b)` did not actually modify b, which makes sense, because passing a struct to a function [copies](https://tour.golang.org/methods/4) the struct value instead of passing a reference to it.
 
 To fix this, we have to use a pointer argument, which means that we also have to invoke the function with `write(&b, ...)`. This works, but doesn't make the code any more consistent.
 
@@ -147,6 +147,9 @@ func main() {
 > There's no avoiding pointers in Go.  
 > Learn the quirks and the gotchas today.  
 > ✨ Keep learning! ✨
+
+_To leave a comment  
+please visit [dev.to/jldec](getting-started-with-go-part-2-pointers-4a47)_
 
 ---- #excerpt ----
 
