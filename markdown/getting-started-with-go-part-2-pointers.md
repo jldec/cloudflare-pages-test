@@ -59,8 +59,8 @@ func (b *Builder) Write(p []byte) (int, error)
 
 I was tempted to replace `Fprintf(&b, ...)` with `Fprintf(b, ...)`, to make it more consistent with the `b.WriteString()` and `b.String()` further down, but doing this causes the compiler to complain:
 
-_cannot use b (type strings.Builder) as type io.Writer in argument to fmt.Fprintf:  
-strings.Builder does not implement io.Writer (**Write method has pointer receiver**)_
+_"cannot use b (type strings.Builder) as type io.Writer in argument to fmt.Fprintf:
+strings.Builder does not implement io.Writer (**Write method has pointer receiver**)"_
 
 ## Value vs. pointer function arguments
 
