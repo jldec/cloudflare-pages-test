@@ -87,7 +87,7 @@ The 3 calls to `write(b)` do not modify the builder declared at the top.
 
 This makes sense, because passing a struct to a function [copies](https://tour.golang.org/methods/4) the struct value.
 
-To fix this, we have to use a pointer argument in order to pass the argument by reference, and we have to invoke the function with `write(&b, ...)`. This works, but it doesn't make the code any more consistent.
+To fix this, we have to use a pointer, to pass the struct by reference, and we have to invoke the function with `write(&b, ...)`. This works, but it doesn't make the code any more consistent.
 
 ```go
 func main() {
