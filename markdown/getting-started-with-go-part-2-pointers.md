@@ -133,7 +133,7 @@ The declaration above results in a nil pointer panic at run time, because b is u
 
 ## Create the Builder with new()
 
-Here is one way to start with a pointer which is initialized to point to new Builder.
+Here is one way to initialize a pointer so that it references a new Builder.
 
 ```go
 func main() {
