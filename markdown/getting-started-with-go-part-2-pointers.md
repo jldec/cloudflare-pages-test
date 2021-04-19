@@ -21,9 +21,11 @@ meta-twitter;image;alt: Ladybug in Cambridge UK
 
 This is part 2 of my experience as a new user of Go, featuring first encounters with pointers. For part 1, see [Getting started with Go](/getting-started-with-go).
 
+If you'd like to follow along, and try out out the code in this article, all you need is the Go [playground](https://play.golang.org/) to run the examples.
+
 ## Pointers
 
-The [shortscale](https://github.com/jldec/shortscale-go/blob/main/shortscale.go) package which I covered last time, uses a string [Builder](https://pkg.go.dev/strings#Builder). Here is the example from the Builder docs. When you run it, it will output: _3...2...1...ignition_.
+The [shortscale](https://github.com/jldec/shortscale-go/blob/main/shortscale.go) package which I covered last time, uses a string [Builder](https://pkg.go.dev/strings#Builder). Here is the example from the Builder docs.
 
 ```go
 package main
@@ -43,16 +45,22 @@ func main() {
 }
 ```
 
-Notice that `var b` is an instance of the Builder.
+Notice that `var b` is an instance of the Builder. When you run the code, it will output: _3...2...1...ignition_.
 
 ## Pointer receiver methods and interfaces
 
-The first argument to fmt.Fprintf is `&b`, a [pointer](https://tour.golang.org/moretypes/1) to b. This is necessary, because Fprintf expects an [io.Writer](https://pkg.go.dev/io#Writer) interface which is satisfied by the [Builder.Write](https://pkg.go.dev/strings#Builder.Write) method which has a `*Builder` pointer receiver.
+The first argument to fmt.Fprintf is `&b`, a [pointer](https://tour.golang.org/moretypes/1) to b. This is necessary, because fmt.Fprintf expects an [io.Writer](https://pkg.go.dev/io#Writer) interface.
 
-I was tempted to replace `Fprintf(&b, ...)` with `Fprintf(b, ...)`, to make it more consistent with the `b.WriteString` and `b.String` Builder method calls further down, but doing this causes the compiler to complain:
+The [Builder.Write](https://pkg.go.dev/strings#Builder.Write) method matches the io.Writer interface. Notice the pointer syntax in the method receiver after the `func` keyword.
+
+```go
+func (b *Builder) Write(p []byte) (int, error)
+```
+
+I was tempted to replace `Fprintf(&b, ...)` with `Fprintf(b, ...)`, to make it more consistent with the `b.WriteString()` and `b.String()` further down, but doing this causes the compiler to complain:
 
 _cannot use b (type strings.Builder) as type io.Writer in argument to fmt.Fprintf:  
-strings.Builder does not implement io.Writer (Write method has pointer receiver)_
+strings.Builder does not implement io.Writer (**Write method has pointer receiver**)_
 
 ## Value vs. pointer function arguments
 
@@ -73,11 +81,13 @@ func write(b strings.Builder, s string) {
 }
 ```
 
-Running the code above in the [example sandbox](https://pkg.go.dev/strings#Builder) outputs just the word _ignition_.
+Running the code above in the [example sandbox](https://pkg.go.dev/strings#Builder) outputs just the word _ignition_. 
 
-This suggests that the 3 calls to `write(b)` did not actually modify b, which makes sense, because passing a struct to a function [copies](https://tour.golang.org/methods/4) the struct value instead of passing a reference to it.
+The 3 calls to `write(b)` do not modify the builder declared at the top.
 
-To fix this, we have to use a pointer argument, which means that we also have to invoke the function with `write(&b, ...)`. This works, but doesn't make the code any more consistent.
+This makes sense, because passing a struct to a function [copies](https://tour.golang.org/methods/4) the struct value.
+
+To fix this, we have to use a pointer argument in order to pass the argument by reference, and we have to invoke the function with `write(&b, ...)`. This works, but it doesn't make the code any more consistent.
 
 ```go
 func main() {
@@ -123,6 +133,8 @@ The declaration above results in a nil pointer panic at run time, because b is u
 
 ## Create the Builder with new()
 
+Here is one way to start with a pointer which is initialized to point to new Builder.
+
 ```go
 func main() {
 	b := new(strings.Builder)
@@ -134,9 +146,10 @@ func main() {
 }
 ```
 
-`new(strings.Builder)` returns a pointer to a freshly allocated Builder, which we can use for both functions and pointer receiver methods. This is pattern I finally opted for in [shortscale-go](https://github.com/jldec/shortscale-go/blob/2485be23ef48660d8913b2ac884030220dc82d74/shortscale.go#L17-L24).
+`new(strings.Builder)` returns a pointer to a freshly allocated Builder, which we can use for both functions and pointer receiver methods. This is the pattern which I now use in [shortscale-go](https://github.com/jldec/shortscale-go/blob/2485be23ef48660d8913b2ac884030220dc82d74/shortscale.go#L17-L24).
 
-NOTE: The more explicit [struct literal](https://tour.golang.org/moretypes/5) syntax is equivalent to new() in this case.
+
+An alternative, which does the same thing, is the more explicit [struct literal](https://tour.golang.org/moretypes/5) shown below.
 
 ```go
 func main() {
