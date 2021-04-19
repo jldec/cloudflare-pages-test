@@ -49,7 +49,7 @@ Notice that `var b` is an instance of the Builder. When you run the code, it wil
 
 ## Pointer receiver methods and interfaces
 
-The first argument to fmt.Fprintf is `&b`, a [pointer](https://tour.golang.org/moretypes/1) to b. This is necessary, because fmt.Fprintf expects an [io.Writer](https://pkg.go.dev/io#Writer) interface.
+The first argument to fmt.Fprintf is `&b`, a [pointer](https://tour.golang.org/moretypes/1) to b. This is necessary, because [fmt.Fprintf](https://pkg.go.dev/fmt#Fprintf) expects an [io.Writer](https://pkg.go.dev/io#Writer) interface.
 
 The [Builder.Write](https://pkg.go.dev/strings#Builder.Write) method matches the io.Writer interface. Notice the pointer syntax in the method receiver after the `func` keyword.
 
