@@ -1,17 +1,17 @@
 ---- /getting-started-with-go-part-2-pointers ----
-title: Quirks and Gotchas of pointers in Go
+title: Getting started with Go pointers
 image: images/ladybug.jpg
 date: 2021-04-18
 template: post
-metap-og;title: Quirks and Gotchas of pointers in Go
+metap-og;title: Getting started with Go pointers
 metap-og;image: https://jldec.me/images/ladybug.jpg
 metap-og;type: article
 metap-og;url: https://jldec.me/getting-started-with-go-part-2-pointers
-metap-og;description: My experience as a new user of Go
+metap-og;description: My experience as a new user of Go pointers
 meta-twitter;site: @jldec
 meta-twitter;creator: @jldec
-meta-twitter;title: Quirks and Gotchas of pointers in Go
-meta-twitter;description: My experience as a new user of Go
+meta-twitter;title: Getting started with Go pointers
+meta-twitter;description: My experience as a new user of Go pointers
 meta-twitter;card: summary_large_image
 meta-twitter;widgets;new-embed-design: on
 meta-twitter;image: https://jldec.me/images/ladybug.jpg
@@ -19,7 +19,7 @@ meta-twitter;image;alt: Ladybug in Cambridge UK
 
 ## Golang
 
-This is part 2 of my experience as a new user of Go, focusing on the quirks and gotchas of pointers. For installation, testing, and publishing packages, see [Getting started with Go](/getting-started-with-go).
+This is part 2 of my experience as a new user of Go, focusing on the quirks and gotchas of pointers. For installation, testing, and packages, see [Getting started with Go](/getting-started-with-go).
 
 If you'd like to follow along, and try out out the code in this article, all you need is the Go [playground](https://play.golang.org/) to run the examples.
 
