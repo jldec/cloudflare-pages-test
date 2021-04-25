@@ -187,7 +187,7 @@ To fix this, the counter has be protected to make the increment operation atomic
 
 ## Counter-go
 
-[github.com/jldec/counter-go](https://github.com/jldec/counter-go) package demonstrates 3 different implementations of a threadsafe global counter.
+[github.com/jldec/counter-go](https://github.com/jldec/counter-go) demonstrates 3 different implementations of a threadsafe global counter.
 
 1. **CounterAtomic** uses `atomic.AddUint64` and `atomic.LoadUint64`.
 2. **CounterMutex** uses `sync.RWMutex`.
