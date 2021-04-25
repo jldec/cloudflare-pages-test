@@ -189,28 +189,9 @@ How to do this will be the topic of my next blog post, but for the impatient, I 
 
 > 🚀 - code safe - 🚀
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 _To leave a comment  
-please visit [dev.to/jldec](https://dev.to/jldec/getting-started-with-go-part-2-pointers-4a47)_
+please visit [dev.to/jldec](https://dev.to/jldec/getting-started-with-goroutines-and-channels-fc6)_
 
 ---- #excerpt ----
 
-Part 3 of my experience as a new user of Go, focusing on concurrency with Goroutines and channels.
+Part 3 in my learning Go series, focusing on concurrency with Goroutines and channels.
