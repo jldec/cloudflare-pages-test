@@ -1,7 +1,7 @@
 ---- /getting-started-with-go-part-3-goroutines-and-channels ----
 title: Getting started with Goroutines and channels
 image: images/grape-hyacinth.jpg
-date: 2021-04-24
+date: 2021-04-25
 template: post
 metap-og;title: Getting started with Goroutines and channels
 metap-og;image: https://jldec.me/images/grape-hyacinth.jpg
