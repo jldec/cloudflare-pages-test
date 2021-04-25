@@ -63,7 +63,7 @@ Let's try sending multiple requests at the same time. This command invokes curl 
 $ cat urls.txt | xargs -P 4 -n 1 curl
 ```
 
-The file contains 100 lines, but instead of ending on a nice round number, on systems with more than 1 core you may see  something like this (e.g. after 3 runs)
+The [file](https://github.com/jldec/racey-go/blob/main/urls.txt) contains 100 lines, but instead of ending on a nice round number, on systems with more than 1 core you may see  something like this (e.g. after 3 runs)
 
 ```
 289
