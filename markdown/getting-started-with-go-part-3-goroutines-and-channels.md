@@ -121,6 +121,8 @@ _A data race occurs when two goroutines access the same variable concurrently an
 
 ## Goroutines
 
+Goroutines provide low-overhead threading. They are easy to create and scale well on multi-core processors.
+
 Let's start with an example.
 
 ```go
