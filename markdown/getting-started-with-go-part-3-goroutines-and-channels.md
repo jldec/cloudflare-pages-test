@@ -159,9 +159,9 @@ Each 'go countdown()' starts a new [goroutine](https://tour.golang.org/concurren
 ...
 crew-1 3
 crew-2 3
-crew-1 2
 crew-2 2
-crew-2 1
+crew-1 2
+crew-1 1
 crew-2 1
 blastoff crew-2
 blastoff crew-1
