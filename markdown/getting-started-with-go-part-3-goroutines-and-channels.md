@@ -123,7 +123,9 @@ _A data race occurs when two goroutines access the same variable concurrently an
 
 Goroutines provide low-overhead threading. They are easy to create and scale well on multi-core processors.
 
-Let's start with an example.
+The Go runtime can schedule many concurrent goroutines across a small number of OS threads. Under the covers, this is how the [http](https://golang.org/src/net/http/server.go#L3013) library handles concurrent web requests.
+
+Let's start with an example. You can run it in the [Go Playground](https://play.golang.org/p/HdH4UQEEXuU).
 
 ```go
 package main
@@ -166,8 +168,6 @@ crew-2 1
 blastoff crew-2
 blastoff crew-1
 ```
-
-The Go runtime can schedule many concurrent goroutines across a small number of OS threads. Under the covers, this is how the [http](https://golang.org/src/net/http/server.go#L3013) library handles concurrent web requests.
 
 ## Channels
 
