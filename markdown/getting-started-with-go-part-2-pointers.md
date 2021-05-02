@@ -21,7 +21,7 @@ meta-twitter;image;alt: Ladybug in Cambridge UK
 
 This is part 2 of my experience as a new user of Go, focusing on the quirks and gotchas of pointers. For installation, testing, and packages, see [Getting started with Go](/getting-started-with-go).
 
-If you'd like to follow along, and try out out the code in this article, all you need is the Go [playground](https://play.golang.org/) to run the examples.
+If you'd like to follow along, and try out out the code in this article, all you need is the Go [playground](https://play.golang.org/p/-UiUJFrloVT) to run the examples.
 
 ## Pointers
 
