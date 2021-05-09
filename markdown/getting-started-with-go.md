@@ -172,7 +172,7 @@ var numwords = map[uint64]string{
 
 The [testing](https://pkg.go.dev/testing) package provides support for running tests and benchmarks with `go test`. The GitHub Action [workflow](https://github.com/jldec/shortscale-go/blob/main/.github/workflows/ci.yaml#L25) for shortscale-go make use of this.
 
-Out of curiosity, I ran [BenchmarkShortscale]https://github.com/jldec/shortscale-go/blob/main/shortscale_test.go#L24) for two variants of the Shortscale function, one which [pre-allocates](https://github.com/jldec/shortscale-go/blob/358a49f24dcb9d4b2c697233f37f5dea4c87d318/shortscale.go#L18) memory for string.Builder, and one which does not. Pre-allocating, reduced the number of allocs/op from 4 to 1, improving ns/op by about 85ns.
+Out of curiosity, I ran [BenchmarkShortscale](https://github.com/jldec/shortscale-go/blob/main/shortscale_test.go#L24) for two variants of the Shortscale function, one which [pre-allocates](https://github.com/jldec/shortscale-go/blob/358a49f24dcb9d4b2c697233f37f5dea4c87d318/shortscale.go#L18) memory for string.Builder, and one which does not. Pre-allocating, reduced the number of allocs/op from 4 to 1, improving ns/op by about 85ns.
 
 **Pre-allocated**
 ```
