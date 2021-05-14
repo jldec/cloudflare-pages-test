@@ -32,7 +32,7 @@ npm start
 
 The browser preview will auto-reload whenever you save a file.
 
-To generate a new set of html and copy static files into ./out.
+To generate a new set of html and copy static files into ./out
 
 ```sh
 npm run generate
