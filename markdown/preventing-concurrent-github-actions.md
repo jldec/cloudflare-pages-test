@@ -1,4 +1,5 @@
----- /serializing-github-actions-with-workers-durable-objects ----
+---- /preventing-concurrent-github-actions ----
+alias: /serializing-github-actions-with-workers-durable-objects
 title: Preventing concurrent GitHub Actions
 image: images/rose.jpg
 date: 2021-06-13
