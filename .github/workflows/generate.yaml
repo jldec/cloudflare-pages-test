@@ -2,6 +2,8 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
+concurrency:
+  group: generate-jldec-uk
 jobs:
   generate:
     runs-on: ubuntu-latest
