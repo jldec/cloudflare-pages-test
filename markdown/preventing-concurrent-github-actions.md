@@ -48,7 +48,7 @@ This is from the workflow which generates [jldec.uk](https://jldec.me/first-step
 
 [![Screenshot of yaml for GitHub Action with concurrency group](/images/github-actions-concurrency-yaml.png)](https://github.com/jldec/cloudflare-pages-test/blob/main/.github/workflows/generate.yaml#L5-L6)
 
-The value of the `group` can be any string - workflows in the same group are effectively serialized.
+The `group` can be any string - workflows in the same group are effectively serialized.
 
 > Thank you GitHub!
 
