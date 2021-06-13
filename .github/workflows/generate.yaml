@@ -30,7 +30,7 @@ jobs:
         # ./scan-linux-x86 http://localhost:3001/
         cd out
         # force commits to validate concurrency restriction
-        echo ${{ github.sha }} >sha.txt
+        # echo ${{ github.sha }} >sha.txt
         git config user.email "jldec@ciaosoft.com"
         git config user.name "cloudflare-pages-test generate action"
         git add -A
