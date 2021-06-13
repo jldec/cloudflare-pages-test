@@ -38,14 +38,16 @@ A number of 3rd party [solutions](https://github.com/softprops/turnstyle) exist,
 
 In the case of using actions to generate a GitHub Pages website, [the feature works](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#concurrency) exactly as required.
 
-- The first workflow will run to completion
-- Subsequent workflows will either be delayed or cancelled.
+- The first workflow will run to completion.
+- Subsequent concurrent workflows will either be delayed or cancelled.
 - In the end only the first and last of the overlapping workflows will be run.
 
 And all you need is [2 lines of yaml](https://github.com/jldec/cloudflare-pages-test/blob/main/.github/workflows/generate.yaml#L5-L6).
 This is from the workflow which generates [jldec.uk](https://jldec.me/first-steps-using-cloudflare-pages#github-pages).
 
 [![Screenshot of yaml for GitHub Action with concurrency group](/images/github-actions-concurrency-yaml.png)](https://github.com/jldec/cloudflare-pages-test/blob/main/.github/workflows/generate.yaml#L5-L6)
+
+The value of the `group` can be any string - workflows in the same group are effectively serialized.
 
 > Thank you GitHub!
 
