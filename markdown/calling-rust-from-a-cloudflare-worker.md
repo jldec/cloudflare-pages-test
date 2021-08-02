@@ -48,7 +48,9 @@ This creates a directory called `wasm-worker` populated with files from [github.
 
 ## wrangler dev
 
-If you set your 'account_id' in wrangler.toml, you can call `wrangler dev` to build and run the worker. (_There is no need to install or run 'wasm-pack' as suggested by the project README._)
+You can now call `wrangler dev` to build and run the worker.
+
+_Note_: There is no need to run 'wasm-pack' as suggested by the project README, and as of wrangler [v1.18.0](https://github.com/cloudflare/wrangler/releases/tag/v1.18.0), your 'account _id' will be auto-inferred by wrangler, if omitted from wrangler.toml.
 
 ```
 $ wrangler dev
