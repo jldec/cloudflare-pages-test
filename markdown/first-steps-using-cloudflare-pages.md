@@ -33,7 +33,7 @@ Back on Cloudflare, you can choose the repo for your new Cloudflare Pages projec
 
 ![Select repo for the Cloudflare Pages project](/images/cf-pages-select-repo.png)
 
-In the configuratiom form, I provided branch name, build command, and output directory.  
+In the configuration form, I provided branch name, build command, and output directory.  
 The project name defaults to the repo name.
 
 ![Configure the build command and output directory](/images/cf-pages-configure-build.png)
@@ -126,7 +126,6 @@ Automating builds and deploys onto GitHub Pages is more work, and requires knowl
 
 _To leave a comment  
 please visit [dev.to/jldec](https://dev.to/jldec/first-steps-using-cloudflare-pages-40gp)_
-
 
 ---- #excerpt ----
 
