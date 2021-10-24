@@ -59,7 +59,7 @@ Finally, I pushed a commit with my changes on the new branch to GitHub, and proc
 > 🚀 
 
 _To leave a comment  
-please visit [dev.to/jldec](https://dev.to/jldec/using-gitpod-to-create-a-pr-3cba)
+please visit [dev.to/jldec](https://dev.to/jldec/using-gitpod-to-create-a-pr-3cba)_
 
 ---- #excerpt ----
 
