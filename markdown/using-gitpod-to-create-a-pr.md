@@ -58,6 +58,9 @@ Finally, I pushed a commit with my changes on the new branch to GitHub, and proc
 > This blogpost was written from a Gitpod workspace, and I recently joined the awesome team at Gitpod myself.  
 > 🚀 
 
+_To leave a comment  
+please visit [dev.to/jldec](https://dev.to/jldec/using-gitpod-to-create-a-pr-3cba)
+
 ---- #excerpt ----
 
 Gitpod hosts workspaces for developers. Each workspace is a Linux container running in the cloud, with a fully functional development environment, and an instance of VS Code which you can open in your browser.
