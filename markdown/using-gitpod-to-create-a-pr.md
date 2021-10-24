@@ -51,7 +51,7 @@ The repo was also [configured](https://www.gitpod.io/docs/config-gitpod-file) to
 
 ![Screenshot of VS Code Remote Explorer sidebar in Gitpod workspace showing open ports](/images/gitpod-ports.png)
 
-I used the `Open Browser` icon to open the webite in another browser window, and watched my changes taking effect each time I modified the code. 
+I used the `Open Browser` icon to open the website in another browser window, and watched my changes taking effect each time I modified the code. 
 
 Finally, I pushed a commit with my changes on the new branch to GitHub, and proceeded to create my PR as usual. No localhost interaction other than running my browser was required.
 
