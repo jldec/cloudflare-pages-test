@@ -33,7 +33,7 @@ Instead of laboriously maintaining your local development environment with every
 
 ## PR for the Gitpod website 
 
-Here's how I created a PR for the [Gitpod website](https://www.gitpod.io/) in just a few minutes. This website was built using [Sveltekit](https://kit.svelte.dev/) to generate static pages hosted by Netlify.
+Here's how I created a PR for the [Gitpod website](https://www.gitpod.io/) in just a few minutes.
 
 Starting from the [issue](https://github.com/gitpod-io/website/issues/1139), I opened a new workspace in Gitpod by prefixing the GitHub url like so: `https://gitpod.io/#https://github.com/gitpod-io/website/issues/1139`. 
 
