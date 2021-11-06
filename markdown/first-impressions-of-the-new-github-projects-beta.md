@@ -24,10 +24,10 @@ GitHub issues have historically provided a simple yet powerful way to track work
 
 But as projects get larger and more complex, working with issues also has its challenges.
 
-- How to turn large "Epic" issues, into smaller issues?
+- How to turn large "Epic" issues into smaller issues?
 - How to prioritize and organize issues into iterations?
 - How to track issues across multiple repositories?
-- How best to incoporate community contributions and other feedback?
+- How best to incorporate community contributions and other feedback?
 
 GitHub has incrementally tried to address some of these challenges. 
 
@@ -35,7 +35,7 @@ GitHub has incrementally tried to address some of these challenges.
 
 - [Milestones](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones) provide a simple way to collect and prioritize issues within a repo. 
 
-- [Projects](https://docs.github.com/en/issues/organizing-your-work-with-project-boards/managing-project-boards) started as single-repo kanban boards, with issues or notes moving vertically or sideways. They later acquired cross-repo and limited automation capabilies.
+- [Projects](https://docs.github.com/en/issues/organizing-your-work-with-project-boards/managing-project-boards) started as single-repo kanban boards, with issues or notes moving vertically or sideways. They later acquired cross-repo and limited automation capabilities.
 
 - [Issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates) help contributors to include specific information in an issue.
 
@@ -85,7 +85,7 @@ A number of informative talks at the recent [GitHub Universe 2021](https://www.g
 
 
 _To leave a comment  
-please visit [dev.to/jldec](https://dev.to/jldec/first-impressions-of-the-new-github-projects-beta-3cba)_
+please visit [dev.to/jldec](https://dev.to/jldec/first-impressions-of-the-new-github-projects-beta-nca)_
 
 ---- #excerpt ----
 
