@@ -157,6 +157,9 @@ To github.com:jldec/lfs-test.git
    c25b950..e695f5f  main -> main
 ```
 
+_To leave a comment  
+please visit [dev.to/jldec](https://dev.to/jldec/what-is-git-lfs-28db)_
+
 
 ---- #excerpt ----
 
