@@ -6,12 +6,12 @@
   "main": "pub-config.js",
   "dependencies": {
     "pub-server": "^2.10.0",
-    "pub-theme-pubblog": "^1.4.0"
+    "pub-theme-pubblog": "^1.5.0"
   },
   "scripts": {
-    "start": "pub",
-    "generate": "pub -O",
-    "preview": "pub -S out"
+    "preview": "pub -S out",
+    "build": "pub -O",
+    "start": "pub"
   },
   "license": "MIT"
 }

@@ -1,6 +1,3 @@
-const DOMAIN = process.env.DOMAIN || 'jldec.me';
-const PREVIEW = !!process.env.PREVIEW;
-
 var opts = module.exports = {
 
   docTitle: DOMAIN + (PREVIEW ? ' (preview)' : ''), // site name
@@ -16,7 +13,7 @@ var opts = module.exports = {
     'pub-pkg-font-open-sans',
     'pub-pkg-font-awesome',
     'pub-pkg-seo',
-    'pub-pkg-highlight'
+    'pub-pkg-prism'
   ],
 
   github: 'https://github.com/jldec/cloudflare-pages-test',
