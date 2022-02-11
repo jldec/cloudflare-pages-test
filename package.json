@@ -10,7 +10,7 @@
   },
   "scripts": {
     "preview": "pub -S out",
-    "build": "pub -O",
+    "generate": "pub -O",
     "start": "pub"
   },
   "license": "MIT"
