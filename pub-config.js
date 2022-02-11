@@ -1,3 +1,6 @@
+const DOMAIN = process.env.DOMAIN || 'jldec.me';
+const PREVIEW = !!process.env.PREVIEW;
+
 var opts = module.exports = {
 
   docTitle: DOMAIN + (PREVIEW ? ' (preview)' : ''), // site name
