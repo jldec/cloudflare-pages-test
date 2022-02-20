@@ -36,7 +36,9 @@ name: About me
 - markdown site generator and editor: [pub-server](https://github.com/jldec/pub-server) (node.js, javascript) - 2014
 - same [website](https://www.fmctraining.com/) - 2016
 - static site hosting: [GitHub Pages](https://pages.github.com) - 2016
-- serverless on Kubernetes: [riff](https://projectriff.io) - 2017
+- serverless on Kubernetes: [riff](https://projectriff.io) - 2018
+- [accelerators](https://docs.vmware.com/en/Application-Accelerator-for-VMware-Tanzu/index.html) for Kubernetes - 2021
+- cloud developer environments - Gitpod - 2022
 
 ---- #excerpt ----
 
