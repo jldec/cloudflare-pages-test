@@ -9,10 +9,9 @@ name: About me
 
 #### Current Favorite
 
-- Physicist: [Andrea Ghez](https://en.wikipedia.org/wiki/Andrea_M._Ghez)
-- Podcast: [Fest & Flauschig](https://open.spotify.com/show/1OLcQdw2PFDPG1jo3s0wbp)
-- Web platform: [Cloudflare Workers](https://workers.cloudflare.com/)
-- UI framework: [Svelte](https://svelte.dev/examples#hello-world)
+- Astrophysicist: [Dr Becky](https://www.youtube.com/c/DrBecky)
+- Podcast: [Oxide Computer](https://www.youtube.com/channel/UCFn4S3OexFT9YhxJ8GWdUYQ)
+- Platform: [Deno Deploy](https://deno.com/deploy)
 
 #### Work Sampling
 
@@ -38,7 +37,7 @@ name: About me
 - static site hosting: [GitHub Pages](https://pages.github.com) - 2016
 - serverless on Kubernetes: [riff](https://projectriff.io) - 2018
 - [accelerators](https://docs.vmware.com/en/Application-Accelerator-for-VMware-Tanzu/index.html) for Kubernetes - 2021
-- cloud developer environments - Gitpod - 2022
+- cloud dev environments: [Gitpod](https://www.gitpod.io) - 2022
 
 ---- #excerpt ----
 
