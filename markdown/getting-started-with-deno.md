@@ -19,7 +19,7 @@ This article describes my first steps using Deno.
 Deno can be [installed](https://deno.land/manual/getting_started/installation) by copying the release from [GitHub](https://github.com/denoland/deno/releases/latest) to a location on your path. I configured my environment as follows:
 
 ```sh
-export DENO_DIR=~/deno
+export DENO_DIR=~/.deno
 export PATH=${PATH}:${DENO_DIR}/bin
 ```
 
