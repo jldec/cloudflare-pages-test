@@ -73,7 +73,7 @@ I had also heard about [Skypack](https://docs.skypack.dev/skypack-cdn/code/deno)
 The code in [scan.js](https://github.com/jldec/deno-hello/blob/main/scan.js) crawls a website, validating that all the links on the site which point to the same origin can be fetched.
 
 ```js
-import parse5 from "https://cdn.skypack.dev/parse5?dts";
+import parse5 from "https://cdn.skypack.dev/parse5@6.0.1";
 
 const rootUrl = Deno.args[0];
 if (!rootUrl) exit(1, "Please provide a URL");
