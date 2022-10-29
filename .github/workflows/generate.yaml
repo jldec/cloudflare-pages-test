@@ -12,10 +12,10 @@ jobs:
 
     steps:
     - name: checkout source repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: checkout destination repo under ./out
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: jldec/jldec.uk
         token: ${{ secrets.GH_TOKEN }}
