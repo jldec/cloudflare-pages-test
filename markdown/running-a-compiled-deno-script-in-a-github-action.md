@@ -47,7 +47,7 @@ In this case, I modified the [workflow](https://github.com/jldec/cloudflare-page
     ...
     npm run generate
     npm run preview &
-    curl -LO https://github.com/jldec/deno-hello/releases/download/v1.0.2/scan-linux-x86 && chmod +x scan-linux-x86
+    curl -LO https://github.com/jldec/deno-hello/releases/download/v1.0.0/scan-linux-x86 && chmod +x scan-linux-x86
     ./scan-linux-x86 http://localhost:3001/
     ...
 ```
