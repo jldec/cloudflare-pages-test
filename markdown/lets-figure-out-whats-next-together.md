@@ -37,7 +37,7 @@ To be honest, I don't know what's next (yet).
 
 > Let's figure out what's next together!  
 
-More about me at [jldec.me](https:jldec.me/)  
+More about me at [jldec.me](/)  
 Reach out on [twitter](https://twitter.com/jldec), or [linkedin](https://www.linkedin.com/in/jldec)  
 Or email [whatsnext@jldec.me](mailto:whatsnext@jldec.me)
 
