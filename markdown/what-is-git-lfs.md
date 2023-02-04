@@ -37,11 +37,14 @@ Installation requires 2 steps.
 1. Place `git-lfs` on the path.  
    I pulled the latest binary for macOS arm64 from [GitHub releases](https://github.com/git-lfs/git-lfs/releases).
 
-2. Configure git to use LFS with `git lfs install`
+2. Configure git to use LFS with `git lfs install`.
+
+Both of these steps are included in the `install.sh` script, in the GitHub release.
 
 ## Why is the binary called 'git-lfs'?
-A git extension is a binary called `git-command`, which you can invoke with `git command`.
-Running `git lfs` gives you a nice summary of the available commands with examples.
+A git extension is a binary prefixed `git-`.
+
+Running `git lfs` invokes `git-lfs`, which gives you a nice summary of the available commands.
 
 ```
 To get started with Git LFS, the following commands can be used.
@@ -97,7 +100,7 @@ This repo lives at [github.com/jldec/lfs-test](https://github.com/jldec/lfs-test
 
 ```sh
 $ git init
-Initialized empty Git repository in /Users/jldec/gitpod/lfs-test/.git/
+Initialized empty Git repository in /Users/jldec/lfs-test/.git/
 
 $ git lfs track '*.png'
 Tracking "*.png"

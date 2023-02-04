@@ -55,7 +55,7 @@ I used the `Open Browser` icon to open the website in another browser window, an
 
 Finally, I pushed a commit with my changes on the new branch to GitHub, and proceeded to create my PR as usual. No localhost interaction other than running my browser was required.
 
-> This blogpost was written from a Gitpod workspace, and I recently joined the awesome team at Gitpod myself.  
+> This blogpost was written from a Gitpod workspace.  
 > 🚀 
 
 _To leave a comment  
