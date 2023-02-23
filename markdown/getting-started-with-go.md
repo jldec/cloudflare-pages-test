@@ -1,6 +1,6 @@
 ---- /getting-started-with-go ----
 title: Getting started with Go
-image: images/church-blossoms.jpg
+image: /images/church-blossoms.jpg
 date: 2021-04-03
 template: post
 metap-og;title: Getting started with Go

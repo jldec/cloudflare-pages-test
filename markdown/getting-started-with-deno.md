@@ -1,6 +1,6 @@
 ---- /getting-started-with-deno ----
 title: Getting Started with Deno
-image: images/clouds-trees.jpg
+image: /images/clouds-trees.jpg
 date: 2021-02-28
 template: post
 

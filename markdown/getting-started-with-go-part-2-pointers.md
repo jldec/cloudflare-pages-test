@@ -1,6 +1,6 @@
 ---- /getting-started-with-go-part-2-pointers ----
 title: Getting started with Go pointers
-image: images/ladybug.jpg
+image: /images/ladybug.jpg
 date: 2021-04-18
 template: post
 metap-og;title: Getting started with Go pointers
