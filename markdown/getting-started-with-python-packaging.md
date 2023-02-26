@@ -303,7 +303,7 @@ shortscale.bench_shortscale()
 
 ![Screenshot of browser at https://pyodide.org/en/stable/console.html running shortscale](/images/pyodide-shortscale.png)
 
-Looks like Python in WASM in the browser is about 2 to 3 times slower than native CPython.
+It looks like Python in WASM in the browser is only 2 to 3 times slower than native CPython. Amazing!
 
 ## Jupyter notebooks on GitHub
 
