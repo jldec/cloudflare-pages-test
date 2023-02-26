@@ -31,6 +31,8 @@ This post covers the following steps:
 3. Build and publish the incomplete [v0.1](https://github.com/jldec/shortscale-py/tree/bb9b026b9097ce9c601e632a9d1f74a7da6adf29) module.
 4. Complete the logic [v1.0.0](https://github.com/jldec/shortscale-py/commit/6ab4a4b541590a60ebe2944473094465ba8f14f5).
 5. Benchmarks
+6. Python in the browser
+7. Jupyter notebooks
 
 ## Install python v3.10 (the hard way)
 
@@ -71,17 +73,16 @@ Python [modules](https://docs.python.org/3/tutorial/modules.html) and their depe
 
 Configuring a [virtual environment](https://docs.python.org/3/library/venv.html) will isolate modules under a `.venv` directory, which is easy to clean up, rather than installing everything globally.
 
-I created a venv under my home directory using the following command
+I created a venv under my home directory.
 
 ```sh
 python3 -m venv ~/.venv
 ```
 
-Instead of "activating" the venv, which changes the prompt, I prefer to prepend it directly onto my PATH for now.
+Instead of "activating" the venv, which changes the prompt, I prepended the .venv/bin directory onto my PATH.
 
 ```
 export PATH=$HOME/.venv/bin:$PATH
-export VIRTUAL_ENV=$HOME/.venv
 ```
 
 ## Create a new module called shortscale
@@ -124,7 +125,7 @@ Next, I built and published this incomplete [v0.1](https://github.com/jldec/shor
 
 Unlike the npm JavaScript ecosystem, you can't just use pip to publish a module to the pypi repository. There are [different build tools](https://packaging.python.org/en/latest/tutorials/packaging-projects/#creating-pyproject-toml) to choose from.
 
-I chose `setuptools` because it appears to be the closest to a standard, and shows what it's doing. This meant installing [build](https://pypi.org/project/build/) and [twine](https://pypi.org/project/build/).   
+I chose `setuptools` because it appears to be the recommended tool, and shows what it's doing. This meant installing [build](https://pypi.org/project/build/) and [twine](https://pypi.org/project/build/).   
 
 Python packages are described in a `pyproject.toml`. Note that project.scripts points to the CLI entrypoint at main().
 
@@ -159,17 +160,6 @@ The build tool creates 2 module bundles (source and runnable code) in the ./dist
 ```
 $ python -m build
 ...
-discovered py_modules -- ['shortscale']
-...
-creating '/Users/jldec/pub/shortscale-py/dist/.tmp-d0g4dwyd/shortscale-0.1.0-py3-none-any.whl' and adding 'build/bdist.macosx-13.1-arm64/wheel' to it
-adding 'shortscale.py'
-adding 'shortscale-0.1.0.dist-info/LICENSE'
-adding 'shortscale-0.1.0.dist-info/METADATA'
-adding 'shortscale-0.1.0.dist-info/WHEEL'
-adding 'shortscale-0.1.0.dist-info/entry_points.txt'
-adding 'shortscale-0.1.0.dist-info/top_level.txt'
-adding 'shortscale-0.1.0.dist-info/RECORD'
-removing build/bdist.macosx-13.1-arm64/wheel
 Successfully built shortscale-0.1.0.tar.gz and shortscale-0.1.0-py3-none-any.whl
 ```
 
@@ -195,25 +185,22 @@ $ python -m venv .venv
 $ source .venv/bin/activate
 
 (.venv) $ pip install shortscale
-Collecting shortscale
-  Using cached shortscale-0.1.0-py3-none-any.whl (3.8 kB)
-Installing collected packages: shortscale
+...
 Successfully installed shortscale-0.1.0
 
 (.venv) $ shortscale 0xffffffffffff
 281474976710655 (48 bits)
 
 $ deactivate
-$ 
 ```
 
 ## Complete the logic
 
 Python still amazes me with its terseness and readability. 
 
-The code ended up needing [3 functions](https://github.com/jldec/shortscale-py/blob/main/shortscale.py), of which the longest is 30 lines with generous spacing. 
+The first iteration had [3 functions](https://github.com/jldec/shortscale-py/blob/main/shortscale.py), of which the longest had 30 lines with generous spacing. 
 
-Here is the function which decomposes a number into powers of 1000. I wonder if this could be expressed as a [list comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)?
+One of those functions decomposes a number into powers of 1000.
 
 ```py
 def powers_of_1000(n: int):
@@ -233,94 +220,106 @@ def powers_of_1000(n: int):
     return p_list
 ```
 
-The [test function](https://github.com/jldec/shortscale-py/blob/main/tests/test_shortscale.py) took just 3 lines:
+Playing aound in a Jupyter notebook, I was able to eliminate the extra function (and the list which it returns), simply by reversing the order of building the shortscale output.
 
-```py
-def test_shortscale():
-    for (num, s) in TESTS:
-        assert shortscale.shortscale(num) == s
-```
+![Screenshot of a Jupyter notebook in VS Code exploring shortscale](/images/jupyter-notebook-vs-code.png)
+
+Using a Jupyter environment in VS Code is a clear win. The [result](https://github.com/jldec/shortscale-py/pull/3) was simpler and faster.
+
+
+## Testing
+There is nice support for Python testing and debugging in VS Code. 
+
+The [function](https://github.com/jldec/shortscale-py/blob/main/tests/test_shortscale.py) to run unit tests took just 3 lines. 
+
+![Screenshot of VS Code Test integration for pytest](/images/python-test-vscode.png)
 
 ## Benchmarks
 
-I was pleased with the [benchmarks](https://github.com/jldec/shortscale-py/blob/main/tests/bench_shortscale.py) as well. For this string-manipulation test-case, Python is only 2-3x slower than JavaScript on V8.
+I was pleased with the [benchmarks](https://github.com/jldec/shortscale-py/blob/main/tests/bench_shortscale.py) as well. For this string manipulation micro-benchmark, CPython 3.11 is only 1.5x slower than V8 JavaScript! 
 
 Compiled languages like Go and Rust will outperform that, but again, not by a huge amount.   
 
 The results below are from my personal M1 arm64 running macOS.
 
-#### Python
+### Python
+
+#### Python v3.11.2
 ```
-$ python tests/bench_shortscale.py 
-         1 calls,        100 bytes,    11750 ns/call
-         2 calls,        200 bytes,     5584 ns/call
-         5 calls,        500 bytes,     4367 ns/call
-        10 calls,       1000 bytes,     4158 ns/call
-        20 calls,       2000 bytes,     4087 ns/call
-        50 calls,       5000 bytes,     4043 ns/call
-       100 calls,      10000 bytes,     4063 ns/call
-       200 calls,      20000 bytes,     4055 ns/call
-       500 calls,      50000 bytes,     3914 ns/call
-      1000 calls,     100000 bytes,     3839 ns/call
-      2000 calls,     200000 bytes,     3426 ns/call
-      5000 calls,     500000 bytes,     3044 ns/call
-     10000 calls,    1000000 bytes,     2479 ns/call
-     20000 calls,    2000000 bytes,     2131 ns/call
-     50000 calls,    5000000 bytes,     2067 ns/call
-    100000 calls,   10000000 bytes,     2072 ns/call
+$ python tests/bench_shortscale.py
+
+ 50000 calls,    5000000 bytes,     1264 ns/call
+100000 calls,   10000000 bytes,     1216 ns/call
+200000 calls,   20000000 bytes,     1216 ns/call
 ```
 
-#### Javascript
+#### Python v3.10.9
 ```
-> node test/bench.js
+$ python tests/bench_shortscale.py
 
-20000 calls, 2000000 bytes, 1083 ns/call
-20000 calls, 2000000 bytes, 863 ns/call
-20000 calls, 2000000 bytes, 793 ns/call
-20000 calls, 2000000 bytes, 809 ns/call
-20000 calls, 2000000 bytes, 789 ns/call
-20000 calls, 2000000 bytes, 809 ns/call
-20000 calls, 2000000 bytes, 774 ns/call
-20000 calls, 2000000 bytes, 782 ns/call
-20000 calls, 2000000 bytes, 796 ns/call
-20000 calls, 2000000 bytes, 792 ns/call
-20000 calls, 2000000 bytes, 791 ns/call
-20000 calls, 2000000 bytes, 803 ns/call
+ 50000 calls,    5000000 bytes,     1811 ns/call
+100000 calls,   10000000 bytes,     1808 ns/call
+200000 calls,   20000000 bytes,     1809 ns/call
+```
+
+### Javascript
+```
+$ node test/bench.js
+
 20000 calls, 2000000 bytes, 796 ns/call
 20000 calls, 2000000 bytes, 790 ns/call
 20000 calls, 2000000 bytes, 797 ns/call
 ```
 
-#### Go
+### Go
 ```
 $ go test -bench . -benchmem
-goos: darwin
-goarch: arm64
-pkg: github.com/jldec/shortscale-go
+
 BenchmarkShortscale-8   	 4227788	       252.0 ns/op	     248 B/op	       5 allocs/op
---- BENCH: BenchmarkShortscale-8
-    shortscale_test.go:38: 1 iterations, 100 bytes
-    shortscale_test.go:38: 100 iterations, 10000 bytes
-    shortscale_test.go:38: 10000 iterations, 1000000 bytes
-    shortscale_test.go:38: 1000000 iterations, 100000000 bytes
-    shortscale_test.go:38: 4227788 iterations, 422778800 bytes
-PASS
-ok  	github.com/jldec/shortscale-go	1.629s
 ```
 
-#### Rust
+### Rust
 ```
 $ cargo bench
 
 running 2 tests
 test a_shortscale                        ... bench:         182 ns/iter (+/- 3)
 test b_shortscale_string_writer_no_alloc ... bench:          63 ns/iter (+/- 2)
-
-test result: ok. 0 passed; 0 failed; 0 ignored; 2 measured
 ```
 
-For a small optimization, check out this [PR](https://github.com/jldec/shortscale-py/pull/1/files).
+## Let's run shortscale in the browser
 
+Open your browser on https://pyodide.org/en/stable/console.html and paste the following python commands into the python REPL, line by line.
+
+```python
+import micropip
+await micropip.install("shortscale")
+import shortscale
+
+shortscale.shortscale(0xffff0000)
+
+shortscale.bench_shortscale()
+```
+
+![Screenshot of browser at https://pyodide.org/en/stable/console.html running shortscale](/images/pyodide-shortscale.png)
+
+Looks like Python in WASM in the browser is about 2 to 3 times slower than native CPython.
+
+## Jupyter notebooks on GitHub
+
+GitHub shows the output of Jupyter notebook (.ipynb) files in your browser
+
+https://github.com/jldec/shortscale-py/blob/main/shortscale.ipynb
+
+![Screenshot of https://github.com/jldec/shortscale-py/blob/main/shortscale.ipynb](/images/shortscale-notebook-github.png)
+
+## Google Colaboratory
+
+You can also open the [notebook](https://github.com/jldec/shortscale-py/blob/main/shortscale.ipynb) from GitHub in a [Google Colaboratory](https://colab.research.google.com/github/jldec/shortscale-py/blob/main/shortscale.ipynb) environment
+
+https://colab.research.google.com/github/jldec/shortscale-py/blob/main/shortscale.ipynb
+
+![Screenshot of Google Colaboratory running at https://colab.research.google.com/github/jldec/shortscale-py/blob/main/shortscale.ipynb](/images/shortscale-on-google-colaboratory.png)
 
 >> Keep on learning  
 >> 🚀
