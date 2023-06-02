@@ -1,6 +1,6 @@
 ---- /github-actions-101 ----
 title: GitHub Actions 101
-image: images/snowy-boathouse.jpg
+image: /images/snowy-boathouse.jpg
 date: 2020-11-27
 template: post
 
@@ -8,7 +8,7 @@ template: post
 
 Today I was feeling a bit lost (again, sigh) trying to understand GitHub Actions.
 
-Specifically, the [documentation](https://docs.github.com/en/free-pro-team@latest/actions) did not appear to have an overview of how actions are composed and what they are composed of. What are those things that run? How are they named and referenced?
+Specifically, the [documentation](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) did not appear to have an overview of how actions are composed and what they are composed of. What are those things that run? How are they named and referenced?
 
 In retrospect, instead of the docs, I would recommend getting started by looking at the yaml for the [Simple workflow](https://github.com/actions/starter-workflows/blob/main/ci/blank.yml). The button appears in the __Actions__ tab on any new repo.
 
@@ -22,14 +22,14 @@ The button will open the workflow yaml in an editor (it won't be committed to yo
 
 > The first takeaway is that actions can be written using simple shell commands.
 
-Commands run in a shell in VMs which come preinstalled with [commonly used tools](https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu1804-README.md). There is no need to learn a new scripting language. You can even write your action as a shell script in a file, and invoke it from the workflow yaml.
+Commands run in a shell in VMs which come preinstalled with [commonly used tools](https://github.com/actions/runner-images/blob/main/images/linux/Ubuntu2204-Readme.md). There is no need to learn a new scripting language. You can even write your action as a shell script in a file, and invoke it from the workflow yaml.
 
 If you want, you can package and re-use portions of a job in different workflows. These components are also called [actions](https://docs.github.com/en/actions/creating-actions) (that's where some of my initial confusion originated), _but you don't need to learn to write those yourself in order to build your own workflows_.
 
 ## Don't be thrown off by the yaml
 
 Each job is identified by its key e.g. `simple-job` in the example below.  
-The [workflow syntax](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions) documentation denotes this as `jobs.<job-id>`.
+The [workflow syntax](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) documentation denotes this as `jobs.<job-id>`.
 ```yaml
 on: push
 jobs:
@@ -45,7 +45,7 @@ jobs:
 ```
 
 `steps:` contains a list of commands, each described by a `run:`  
-(In the earlier example above, there is also an [action](https://docs.github.com/en/free-pro-team@latest/actions/creating-actions/about-actions), described with `uses:` instead of `run:`)
+(In the earlier example above, there is also an [action](https://docs.github.com/en/actions/creating-actions/about-custom-actions), described with `uses:` instead of `run:`)
 
 The 1st run: command above is quoted, to avoid ": " being interpreted as a yaml map.
 
