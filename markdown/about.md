@@ -1,6 +1,20 @@
 ---- /about ----
 name: About me
 date: 2023-01-24
+image: /images/seapoint.jpg
+metap-og;title: jurgen@jldec.me - About me
+metap-og;image: https://jldec.me/images/seapoint.jpg
+metap-og;type: bio
+metap-og;url: https://jldec.me/about
+metap-og;description: Jürgen Leschner's inspirations and work
+meta-twitter;site: @jldec
+meta-twitter;creator: @jldec
+meta-twitter;title: jurgen@jldec.me - About me
+meta-twitter;description: Jürgen Leschner's inspirations and work
+meta-twitter;card: summary_large_image
+meta-twitter;widgets;new-embed-design: on
+meta-twitter;image: https://jldec.me/images/seapoint.jpg
+meta-twitter;image;alt: Seapoint beach Dublin
 
 ## Jürgen Leschner
 
