@@ -1,6 +1,6 @@
 ---- /spring-boot-101 ----
 title: Spring Boot 101
-image: images/boot1.jpg
+image: /images/boot1.jpg
 date: 2017-06-28
 template: post
 metap-og;title: Spring Boot 101

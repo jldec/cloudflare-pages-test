@@ -1,6 +1,6 @@
 ---- /fun-with-vercel ----
 title: Fun with Vercel
-image: images/library.jpg
+image: /images/library.jpg
 date: 2021-02-07
 template: post
 

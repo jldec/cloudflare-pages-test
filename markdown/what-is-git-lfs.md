@@ -1,6 +1,6 @@
 ---- /what-is-git-lfs ----
 title: What is git LFS?
-image: images/station-clouds.jpg
+image: /images/station-clouds.jpg
 date: 2022-02-08
 template: post
 metap-og;title: What is git LFS?

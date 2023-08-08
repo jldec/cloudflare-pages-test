@@ -1,6 +1,6 @@
 ---- /calling-rust-from-a-cloudflare-worker ----
 title: Calling Rust from a Cloudflare Worker
-image: images/moonbird.jpg
+image: /images/moonbird.jpg
 date: 2021-02-14
 template: post
 

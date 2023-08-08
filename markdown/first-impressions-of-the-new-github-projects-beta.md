@@ -1,6 +1,6 @@
 ---- /first-impressions-of-the-new-github-projects-beta ----
 title: First impressions of the new GitHub Projects Beta
-image: images/red-autumn-leaves.jpg
+image: /images/red-autumn-leaves.jpg
 date: 2021-10-31
 template: post
 metap-og;title: First impressions of the new GitHub Projects Beta

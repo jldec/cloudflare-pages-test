@@ -230,7 +230,7 @@ Using a Jupyter environment in VS Code is a clear win. The [result](https://gith
 ## Testing
 There is nice support for Python testing and debugging in VS Code. 
 
-The [function](https://github.com/jldec/shortscale-py/blob/main/tests/test_shortscale.py) to run unit tests took just 3 lines. 
+The [function](https://github.com/jldec/shortscale-py/blob/main/shortscale/tests/test_shortscale.py) to run unit tests took just 3 lines. 
 
 ![Screenshot of VS Code Test integration for pytest](/images/python-test-vscode.png)
 

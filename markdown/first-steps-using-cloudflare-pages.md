@@ -1,6 +1,6 @@
 ---- /first-steps-using-cloudflare-pages ----
 title: First steps using Cloudflare Pages
-image: images/small-clouds.jpg
+image: /images/small-clouds.jpg
 date: 2021-01-31
 template: post
 

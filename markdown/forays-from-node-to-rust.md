@@ -1,6 +1,6 @@
 ---- /forays-from-node-to-rust ----
 title: Forays from Node to Rust
-image: images/fog.jpg
+image: /images/fog.jpg
 date: 2021-01-10
 template: post
 

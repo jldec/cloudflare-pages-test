@@ -1,6 +1,6 @@
 ---- /running-a-compiled-deno-script-in-a-github-action ----
 title: Running a compiled Deno script in a GitHub Action
-image: images/first-blossoms-2021.jpg
+image: /images/first-blossoms-2021.jpg
 date: 2021-03-14
 template: post
 

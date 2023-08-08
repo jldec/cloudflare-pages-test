@@ -1,6 +1,6 @@
 ---- /using-gitpod-to-create-a-pr ----
 title: Using Gitpod to create a PR
-image: images/fields-of-clouds.jpg
+image: /images/fields-of-clouds.jpg
 date: 2021-10-24
 template: post
 metap-og;title: Using Gitpod to create a PR

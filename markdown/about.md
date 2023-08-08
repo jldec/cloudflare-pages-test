@@ -6,18 +6,18 @@ date: 2023-01-24
 
 [@jldec](https://twitter.com/jldec) |
 [github](https://github.com/jldec?tab=repositories) |
-[linkedin](https://www.linkedin.com/in/jldec) | 
-[resume](resume)
+[linkedin](https://www.linkedin.com/in/jldec)
 
 #### Current Inspirations
 
 - Hope for the future: [Dennis Whyte](https://www.youtube.com/watch?v=aJoRMFWn2Jk)
-- Astrophysicist: [Dr Becky](https://www.youtube.com/c/DrBecky)
 - Podcast: [Oxide Computer](https://www.youtube.com/channel/UCFn4S3OexFT9YhxJ8GWdUYQ)
-- Platform: [Deno Deploy](https://deno.com/deploy)
+- Astrophysicist: [Michael Merrifield](https://www.youtube.com/watch?v=9V_-0WbtSPc)
+- Startup: [tiny corp](https://tinygrad.org/)
 
 #### Work Sampling
 
+- web platform for custom silicon packages: Zero ASIC (Python, Svelte, Tailwind) - 2023
 - cloud development environments: [Gitpod](https://www.gitpod.io/cde) - 2022
 - [accelerators](https://docs.vmware.com/en/Application-Accelerator-for-VMware-Tanzu/index.html) for Kubernetes - 2021
 - serverless on Kubernetes: [riff](https://projectriff.io) - 2018

@@ -1,6 +1,6 @@
 ---- /migrating-from-cjs-to-esm ----
 title: Migrating from CommonJS to ESM
-image: images/calm.jpg
+image: /images/calm.jpg
 date: 2021-01-23
 template: post
 
