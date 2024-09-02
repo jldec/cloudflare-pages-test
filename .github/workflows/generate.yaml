@@ -31,8 +31,9 @@ jobs:
 
     - name: generate output
       run: |
-        pnpm install
-        pnpm run generate
+        # SORRY pnpm doesn't work yet on linux
+        npm install
+        npm run generate
         # npm run preview &
         # curl -LO https://github.com/jldec/deno-hello/releases/download/v1.0.2/scan-linux-x86 && chmod +x scan-linux-x86
         # ./scan-linux-x86 http://localhost:3001/
