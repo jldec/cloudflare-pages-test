@@ -1,6 +1,6 @@
 # cloudflare-pages-test
 
-Copy of the (private) source repo for [jldec.me](https://jldec.me).  
+Copy of the source repo for [jldec.me](https://jldec.me).  
 Contains markdown blog content to generate a static site using [pub-server](https://jldec.github.io/pub-doc).
 
 ### auto-deploy on push

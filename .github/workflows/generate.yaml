@@ -12,14 +12,18 @@ jobs:
 
     steps:
     - name: checkout source repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: checkout destination repo under ./out
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: jldec/jldec.uk
         token: ${{ secrets.GH_TOKEN }}
         path: out
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
 
     - name: generate output
       run: |
