@@ -6,8 +6,11 @@ Contains markdown blog content to generate a static site using [pub-server](http
 ### auto-deploy on push
 
 - Vercel site at [jldec.fun](https://jldec.fun)
-- Cloudflare Pages site at [jldec.eu](https://jldec.eu)
+- Cloudflare Pages site at [cloudflare-pages-test.jldec.me](https://cloudflare-pages-test.jldec.me)
 - GitHub Action generates GitHub Pages site at [jldec.uk](https://jldec.uk)
+
+> [!NOTE]
+> pub-server does not work yet when installed with `pnpm install` on linux.
 
 ### build environment
 
